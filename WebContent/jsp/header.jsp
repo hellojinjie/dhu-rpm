@@ -26,10 +26,10 @@
 <div id="logo"><a href="<s:url action="index" namespace="/" />"><img src="<s:url value="/images/logo.png" />" border="0" /></a></div>
 <ul id="nav">
     <li id="mz-n1"><a href="<s:url action="index" namespace="/project" />" class="top_link"><span>项目管理</span></a></li>
-    <li id="mz-n2"><a href="#" class="top_link"><span>魅族产品</span></a></li>
-    <li id="mz-n3"><a href="#" class="top_link"><span>如何购买</span></a></li>
-    <li id="mz-n4"><a href="#" class="top_link"><span>服务与支持</span></a></li>
-    <li id="mz-n5"><a href="#" class="top_link"><span>魅族社区</span></a></li>
+    <li id="mz-n2"><a href="<s:url action="index" namespace="/project" />" class="top_link"><span>经费管理</span></a></li>
+    <li id="mz-n3"><a href="#" class="top_link"><span>学术管理</span></a></li>
+    <li id="mz-n4"><a href="#" class="top_link"><span>科研处管理</span></a></li>
+    <li id="mz-n5"><a href="#" class="top_link"><span>系统管理</span></a></li>
 </ul>
 <div class="globalsearch">
 <div class="global"><a href="#">个人中心 <s:property value="#session.user"></s:property></a></div>

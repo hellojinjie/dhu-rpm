@@ -12,8 +12,10 @@
         <DIV class=menuLab>
             <DIV class=leftmenu>
                 <UL>
-                    <LI id=Labone ><A href="<s:url action="horizontal" namespace="/project" />" target=_self><SPAN>横向项目</SPAN></A></LI>
-                    <LI id=MzLm_AboutMZ><A href="<s:url action="vertical" namespace="/project" />" target=_self><SPAN>纵向项目</SPAN></A></LI>
+                    <LI id=Labone ><A href="#" target=_self><SPAN>论文管理</SPAN></A></LI>
+                    <LI id=MzLm_AboutMZ><A href="#" target=_self><SPAN>成果管理</SPAN></A></LI>
+                    <LI id=MzLm_AboutMZ><A href="#" target=_self><SPAN>知识产权管理</SPAN></A></LI>
+                    <LI id=MzLm_AboutMZ><A href="#" target=_self><SPAN>学术活动管理</SPAN></A></LI>
                 </UL>
             </DIV>
         </DIV>
@@ -21,7 +23,7 @@
     <DIV class=right>
         <DIV class=pagebody>
             <DIV class=pagefirst></DIV>
-            <SPAN class="icontitle iconnews">最新论文</SPAN>
+            <SPAN class="icontitle iconnews">近期论文</SPAN>
             <DIV class=clear></DIV>
             <!--内容开始-->
             <DIV class=NewsList>
