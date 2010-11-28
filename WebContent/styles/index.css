@@ -1,0 +1,28 @@
+.indexinfo{width:100%;}
+
+.indexinfo .b1{ margin:0px 12px 0px 0px;float:left; width:312px;}
+.indexinfo .b2{ margin:0px 12px 0px 0px;float:left; width:312px;}
+.indexinfo .b3{ margin:0px 0px 0px 0px;float:left; width:312px;}
+
+.indexinfo .box{background:url(images/index_info.jpg) repeat-y top; background-position:-356px 0px;}
+.indexinfo .box span{float:right; padding-right:20px; line-height:41px; font-size:14px;}
+.indexinfo .box h3{ font-size:14px;line-height:41px; padding-left:20px;}
+.indexinfo .box .boxt{background:url(images/index_info.jpg) no-repeat top left;}
+
+
+
+.picinfo ul,.boxbody{width:288px; margin:auto; clear:both; overflow:hidden;}
+.picinfo{ height:120px;}
+.picinfo .infoimg{float:left; width:110px; height:110px; border:#000033 solid 0px; padding:0px; overflow:hidden;}
+.picinfo .infoimg img{ height:105px; width:105px;}
+.picinfo .txt{ width:164px; float:right; margin-right:5px; margin-top:7px; border:#000033 solid 0px;}
+.picinfo .txt h3{ font-weight:normal; line-height:120%; padding:0px; margin:0px; margin-bottom:10px;}
+.picinfo .txt span{ float:left;line-height:160%; font-size:12px; color:#514D4C; border:#000000 solid 0px; padding:0px; height:56px; overflow:hidden;}
+
+.boxbody{overflow:hidden;}
+.boxbody ul{ width:100%;border:#000000 solid 0px;}
+.boxbody li{width:100%;overflow:hidden;background:url(images/icon_1.gif) no-repeat; background-position:-5px -25px; padding-left:10px!important; padding-left:13px; margin:0px; padding-top:0px;}
+.indexinfo .boximg{ background:url(images/index_info.jpg) bottom right; background-repeat:no-repeat;}
+.more{background:url(images/more.jpg) no-repeat right; padding-right:20px;}
+
+#scrollBox2{line-height:20px; margin-left:0px; height:20px; overflow:hidden;background:url(images/icon_1.gif) no-repeat; background-position:-5px -25px;padding-left:12px!important; padding-left:12px; border:#000000 solid 1px;}

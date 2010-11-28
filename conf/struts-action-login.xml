@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+    <package name="login" namespace="/login" extends="struts-default">
+
+		<default-action-ref name="index"></default-action-ref>
+	
+        <action name="index" class="jaunty.rpm.action.login.Login">
+            <result>/jsp/login/login.jsp</result>
+        </action>
+
+        <action name="login" class="loginAction" method="login">
+	        <result type="redirectAction" >
+	            <param name="actionName">index</param>
+	            <param name="namespace">/</param>
+            </result>
+            <result name="input">/jsp/login/login.jsp</result>
+        </action>
+        
+    </package>
+    
+</struts>

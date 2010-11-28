@@ -1,0 +1,135 @@
+/* 全局CSS定义 */
+body { font-family:"Microsoft Yahei",Arial,Helvetica,sans-serif,"宋体";
+ font-size:12px;
+ color:#333;
+
+ line-height:200%;}
+div,form,img,ul,ol,li,dl,dt,dd {margin: 0; padding: 0; border: 0;}
+h1,h2,h3,h4,h5,h6 { margin:0; padding:0;}
+
+body,div,ul,li,form,table,ol,dl,dt,dd{margin:0px;padding:0px;list-style:none;border:0px;}
+textarea {overflow:auto;}
+html {overflow:-moz-scrollbars-vertical;}
+
+font{line-height:150%;}
+form{display:inline}
+input,select,textarea{font-size:12px}
+body > div {margin:0 auto}
+.clear{clear:both;height:0px;font-size:0px;line-height:0px}
+
+
+.Content{ margin-top: 0.5em; line-height:200%;font-size: 14px; color:#333333; }
+table,td,tr,th{ font-size:12px;}
+
+/* 链接颜色 */
+a:link {color: #4E504F; text-decoration:none;}
+a:visited {color: #4E504F;text-decoration:none;}
+a:hover {color: #136481; text-decoration:underline;}
+a:active {color: #136481;}
+
+
+A.Alink_b:link {COLOR: #ffffff;TEXT-DECORATION: none;TEXT-ALIGN: center;font-size:12px}
+A.Alink_b:visited {COLOR: #ffffff;TEXT-DECORATION: none;TEXT-ALIGN: center;font-size:12px}
+A.Alink_b:hover {COLOR: #ffffff;TEXT-DECORATION: none;font-size:12px;background-color: #86CE68;}
+
+A.Alink_a:link {COLOR: #ff0000;TEXT-DECORATION: none;TEXT-ALIGN: center;font-size:12px}
+A.Alink_a:visited {COLOR: #ff0000;TEXT-DECORATION: none;TEXT-ALIGN: center;font-size:12px}
+A.Alink_a:hover {COLOR: #ff0000;TEXT-DECORATION: none;font-size:12px;background-color: #86CE68;}
+
+input{marvellous:expression(this.hideFocus=true); margin:0px; padding:0px;} /*按钮没有虚线*/
+.href{marvellous:expression(this.hideFocus=true); }  /*连接没有虚线*/
+
+/* 颜色属性 [定义规则，小写c加颜色名称] */
+.cRed,a.cRed:link,a.cRed:visited{ color:Red; }
+.cBlue,a.cBlue:link,a.cBlue:visited{color:#0091FC;}
+a.cBlue:hover{color:Red; background:#fff; color:#247695;}
+.cDRed,a.cDRed:link,a.cDRed:visited{ color:#bc2931;}
+.cGray,a.cGray:link,a.cGray:visited{ color: #CECECE;}
+.cDGray,a.cDGray:link,a.cDGray:visited{ color: #666;}
+.cWhite,a.cWhite:link,a.cWhite:visited{ color:#fff;}
+.cBlack,a.cBlack:link,a.cBlack:visited{color:#000; }
+a.cBlack:hover{color:#bc2931;}
+.cYellow,a.cYellow:link,a.cYellow:visited{color:#ff0;}
+
+/* 字体属性 [定义规则，小写f加属性名称] */
+.fB {font-weight: bold;}
+.fI {font-style: italic;}
+
+/* 字体大小*/
+.f12px{ font-size:12px;}
+.f14px{ font-size:14px;}
+.lh180{line-height:180%;}
+.lh250{line-height:250%;}
+
+/* 其他属性 */
+.left{ float: left;}
+.right{ float: right;}
+.hidden {display: none;}
+.unLine ,.unLine a{text-decoration: none;}
+.noBorder{border:none;	}
+
+
+/* CSS Document */
+.blank9{margin:0 auto; width:100%; height:9px; font-size:1px; line-height:1px; }
+.blank6{margin:0 auto; width:100%; height:6px; font-size:1px; line-height:1px; }
+.blank3{margin:0 auto; width:100%; height:3px; font-size:1px; line-height:1px; }
+.blank1{margin:0 auto; width:100%; height:1px; font-size:1px; line-height:1px; }
+
+.blankW9{margin:0 auto; width:100%; height:9px; font-size:1px; background:#fff; clear:both; line-height:1px;}
+.blank12{margin:0 auto; width:100%; height:12px; font-size:1px; line-height:1px; }
+.blank15{margin:0 auto; width:100%; height:15px; font-size:1px; line-height:1px;}
+.lineh_s{margin:0 auto; width:100%; height:16px; font-size:1px; overflow:hidden; border-bottom:#EBECF0 solid 1px;clear:both;}
+.lineH_h{margin:0 auto; width:778px; height:9px; font-size:1px; overflow:hidden; background: url(images/newsline.jpg) repeat-x left;}
+
+.user_msg{background-color:#f8f8f8; border: #e8e8e8 1px solid;}
+.msg{background-color:#f8f8f8; border: #e8e8e8 1px solid; padding:8px; margin:8px; color:#666666; line-height:22px; font-size:12px;}
+.info{ margin: 0px auto; border: #D9E4EB 1px dashed;background-color:#F5FBFD;padding:2px;}
+
+
+#popMoreLayer{width:300px; float:left;}
+#popMoreLayer li{width:100px; float:left; text-align:left; font-size:12px; line-height:20px;}
+#popImageLayer{width:0px; float:left; height:0px; overflow:hidden; display:none;}
+
+
+.title a:link,.pictitle a:link {color:#339900}
+.title a:visited,.pictitle a:visited {color:#339900}
+.title a:hover,.pictitle a:hover {background-color:#e8e8e8;}
+
+/*评论*/
+#ReList .pic,.pic{border:#ccc solid 1px; padding:1px;}
+#ReList .pic{ width:50px; height:50px;}
+#ReList,#ReList ul{ margin:0 auto;  text-align:left; padding:0px;}
+#ReList li{width:100%;}
+#ReList .ReList_L{float:left; text-align:right; min-width:54px; max-width:55px; margin-right:5px;}
+#ReList .ReList_R{width:88%; float:left; text-align:left;min-width:500px;}
+#ReList .ReList_R dt{width:100%; background:#f8f8f8; border-bottom:dashed #000066 1px; line-height:25px;}
+#ReList .ReList_R dl{width:100%; background:#FFFFFF; }
+#ReList .ReList_R dd{width:100%; background:#f8f8f8; margin:0px; padding-top:5px; color:#999999; min-height:60px; }
+#ReList .CFont{ float:left; width:90%; margin:auto; padding:10px;line-height:25px; font-size:12px;}
+
+
+
+/*中间广告*/
+#zhan{
+float: left;             /让块靠左
+clear: left;             /让块的左边不能有其它块
+height: 120px;   /用这个来控制广告在内容里的位置
+width: 1px;         /
+
+}
+#moo_a_d{
+height: 120px;
+width: 180px;
+float: left;           /让块靠左
+clear: left;         /让块的左边不能有其它块
+margin: 15px 15px 15px 0px;
+padding-top:10px;
+}
+#new img,#new table{
+clear: left;       /让内容里的图片和表格不会遮挡广告
+}
+#new{
+float: left;
+}
+
+

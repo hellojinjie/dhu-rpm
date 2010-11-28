@@ -1,0 +1,75 @@
+#notify_form_div input.text {
+	line-height: 31px;
+}
+#notify_form_div input.button {
+	top: 1px;
+	*width: 150px;
+	*top: 0;
+}
+#bottom_menu li.blog a {
+	background-position: 0 5px;
+}
+#bottom_menu li.twitter a {
+	background-position: 0 3px;
+}
+.wrap2 {
+	_background: transparent;
+}
+#reflection_forgot {
+	background: url(img/reflection-forgot-ie.png) no-repeat -10px -4px;
+	height: 106px;
+}
+body.tour #higher .block .inner {
+	_padding-top: 10px;
+	_margin-left: 11px;
+	_margin-top: 60px;
+}
+body.tour #higher .block h3 span {
+	_background: url("img/bg-tour-block-h3-left.gif") no-repeat 0 -1px;
+	float: left;
+	background-position: -1px -1px;
+	left: -8px;
+}
+body.tour #higher .block .caption {
+	_margin-left: 10px;
+}
+#notify_form_div input.button {
+	outline: none;
+	top: 0;
+}
+#reflection_forgot {
+	*height: 102px;
+}
+#forgot_form .waiting {
+	*float: right;
+}
+#forgot_form input.button {
+	*width: 150px;
+	*padding: 1px;
+}
+#signin_link {
+	*position: relative;
+	*top: -35px;
+	*right: 40px;
+}
+#copyright {
+	*text-indent: 60px;
+	*font-weight: 10px;
+}
+#reflection_no_button {
+	background: url(img/reflection-no-button-ie.png) no-repeat -10px -4px;
+	height: 106px;
+}
+body.page-404 #main_paper {
+	border-width: 5px;
+	border-style: solid;
+	border-color: #cdcdcd #cbcbcc #bbb #cbcbcc;
+}
+body.doc #main_paper {
+	border-width: 5px;
+	border-style: solid;
+	border-color: #cdcdcd #cbcbcc #bbb #cbcbcc;
+}
+#reflection {
+	background: url("img/reflection-ie.png") no-repeat scroll -10px -4px;
+}
