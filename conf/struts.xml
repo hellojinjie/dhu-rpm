@@ -6,13 +6,27 @@
 <struts>
 
 	<constant name="struts.objectFactory" value="spring" />
-    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <constant name="struts.enable.DynamicMethodInvocation" value="true" />
     <constant name="struts.devMode" value="true" />
 
 	<include file="struts-action-login.xml"></include>
 
-
-    <package name="default" namespace="/" extends="struts-default">
+    <package name="rpm-default" extends="struts-default" abstract="true">
+        
+        <interceptors>
+        	<interceptor name="permissionInterceptor" class="jaunty.rpm.interceptor.PermissionInterceptor"></interceptor>
+        	
+        	<interceptor-stack name="rpmStack">
+        		<interceptor-ref name="permissionInterceptor"></interceptor-ref>
+        		<interceptor-ref name="defaultStack"></interceptor-ref>
+        	</interceptor-stack>
+        </interceptors>
+    	
+    	<default-interceptor-ref name="rpmStack"></default-interceptor-ref>    
+  	
+    </package>
+    
+    <package name="default" extends="rpm-default">
         <default-action-ref name="index" />
 	    <action name="index">
 	        <result>/jsp/welcome.jsp</result>

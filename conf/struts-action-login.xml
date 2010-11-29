@@ -5,15 +5,17 @@
 
 <struts>
 
-    <package name="login" namespace="/login" extends="struts-default">
+    <package name="login" namespace="/login" extends="rpm-default">
 
 		<default-action-ref name="index"></default-action-ref>
-	
+
         <action name="index" class="jaunty.rpm.action.login.Login">
             <result>/jsp/login/login.jsp</result>
+            <interceptor-ref name="defaultStack"></interceptor-ref>
         </action>
 
         <action name="login" class="loginAction" method="login">
+            <interceptor-ref name="defaultStack"></interceptor-ref>
 	        <result type="redirectAction" >
 	            <param name="actionName">index</param>
 	            <param name="namespace">/</param>
