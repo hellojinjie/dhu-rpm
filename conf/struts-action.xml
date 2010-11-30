@@ -25,4 +25,30 @@
         
     </package>
     
+    <package name="project" namespace="/project" extends="rpm-default">
+    
+    
+    </package>
+    
+    <package name="department" namespace="/department" extends="rpm-default">
+    
+    
+    </package>
+    
+    <package name="fund" namespace="/fund" extends="rpm-default">
+    
+    
+    </package>
+    
+    <package name="research" namespace="/research" extends="rpm-default">
+    
+    
+    </package>
+    
+	<package name="system" namespace="/system" extends="rpm-default">
+    
+    
+    </package>
+   
+    
 </struts>

@@ -8,5 +8,7 @@ public interface UserManager {
 	
 	public boolean isVaild(User user);
 	
+	public User getUserByName(String username);
+	
 	public void register(User user);
 }

@@ -9,7 +9,7 @@
     <constant name="struts.enable.DynamicMethodInvocation" value="true" />
     <constant name="struts.devMode" value="true" />
 
-	<include file="struts-action-login.xml"></include>
+	<include file="struts-action.xml"></include>
 
     <package name="rpm-default" extends="struts-default" abstract="true">
         
@@ -23,7 +23,14 @@
         </interceptors>
     	
     	<default-interceptor-ref name="rpmStack"></default-interceptor-ref>    
-  	
+  		
+  		<global-results>
+  			<result name="login" type="redirectAction">
+  				<param name="namespace">/login</param>
+  				<param name="actionName">index</param>
+  			</result>
+  		</global-results>
+  		
     </package>
     
     <package name="default" extends="rpm-default">

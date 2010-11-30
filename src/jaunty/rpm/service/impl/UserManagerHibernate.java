@@ -22,6 +22,11 @@ public class UserManagerHibernate implements UserManager {
 	}
 
 	@Override
+	public User getUserByName(String username) {
+		return userDao.getUserByName(username);
+	}
+	
+	@Override
 	public boolean isVaild(User user) {
 		return userDao.isVaild(user);
 	}
