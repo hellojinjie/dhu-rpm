@@ -24,6 +24,9 @@ public class PermissionInterceptor implements Interceptor {
 
 	}
 
+	/**
+	 * 这里不能使用 SessionAware ? 什么原因
+	 */
 	@Override
 	public String intercept(ActionInvocation arg0) throws Exception {
 		log.debug("permission interceptor has been invocated");
