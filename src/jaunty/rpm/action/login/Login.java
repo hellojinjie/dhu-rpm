@@ -3,7 +3,6 @@ package jaunty.rpm.action.login;
 import jaunty.rpm.bean.User;
 import jaunty.rpm.service.UserManager;
 
-import java.util.HashMap;
 import java.util.Map;
 
 import org.apache.commons.logging.Log;
@@ -18,7 +17,7 @@ public class Login extends ActionSupport implements SessionAware {
 	private static final Log log = LogFactory.getLog(Login.class);
 	
 	private UserManager userManager;
-	private Map<String, Object> session = new HashMap<String, Object>();
+	private Map<String, Object> session;
 	
 	private String username;
 	private String password;
@@ -34,8 +33,8 @@ public class Login extends ActionSupport implements SessionAware {
 		}
 		
 		User user = userManager.getUserByName(getUsername());
-		
-		session.put("user", user);
+
+		session.put("user", user.getUsername());
 		
 		return SUCCESS;
 	}	

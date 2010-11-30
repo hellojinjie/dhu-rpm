@@ -12,13 +12,16 @@ public class UserDao extends HibernateDaoSupport {
 
 	private static final Log log = LogFactory.getLog(UserDao.class);
 	
+	@SuppressWarnings("unchecked")
 	public boolean isVaild(User user) {
 		
 		boolean vaild = false;
 		
-		this.getHibernateTemplate().findByValueBean(
-				"from user where username = :username and password = :password", user);
-		if (this.getHibernateTemplate().getFetchSize() == 0) {
+		List<User> users = this.getHibernateTemplate().find(
+				"from User where username = ? and password = ?", 
+				user.getUsername(), user.getPassword());
+	
+		if (users.size() == 0) {
 			vaild = false;
 		} else {
 			vaild = true;
@@ -29,7 +32,7 @@ public class UserDao extends HibernateDaoSupport {
 	
 	@SuppressWarnings("unchecked")
 	public User getUserByName(String name) {
-		List<User> users = this.getHibernateTemplate().find("from user where username = ?", name);
+		List<User> users = this.getHibernateTemplate().find("from User where username = ?", name);
 		
 		if (users != null && users.size() > 0) {
 			return users.get(0);

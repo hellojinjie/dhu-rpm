@@ -90,7 +90,7 @@
 
 .globalsearch .global, .Submit,.overSubmit{ line-height:31px;height:31px;background:url(images/public_input.gif) no-repeat left top;}
 .globalsearch{float:left; width:260px; line-height:31px; margin-top:12px;background-attachment:fixed;}
-.globalsearch .global{float:right; width:86px; text-align:right; background-position:1px -150px;}
+.globalsearch .global{float:right; width:86px; text-align:right; background-position:1px -250px;}
 .isearch dd{ float:left; padding:0px; margin:0px;}
 .isearch dl{padding:0px; margin:0px; clear:both;}
 

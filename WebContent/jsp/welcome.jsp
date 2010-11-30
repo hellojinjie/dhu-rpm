@@ -42,7 +42,7 @@
                 </ul>
                 <div class="globalsearch">
                     <div class="global">
-                        <a href="http://en.meizu.com/">Global Site</a>
+                        <a href="http://en.meizu.com/">个人中心 <s:property value="#session.user"></s:property></a>
                     </div>
                 </div>
             </div>

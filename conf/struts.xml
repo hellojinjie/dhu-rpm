@@ -22,8 +22,8 @@
         	</interceptor-stack>
         </interceptors>
     	
-    	<default-interceptor-ref name="rpmStack"></default-interceptor-ref>    
-  		
+    	<default-interceptor-ref name="rpmStack"></default-interceptor-ref>   
+
   		<global-results>
   			<result name="login" type="redirectAction">
   				<param name="namespace">/login</param>

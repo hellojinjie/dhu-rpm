@@ -16,10 +16,7 @@
 
         <action name="login" class="loginAction" method="login">
             <interceptor-ref name="defaultStack"></interceptor-ref>
-	        <result type="redirectAction" >
-	            <param name="actionName">index</param>
-	            <param name="namespace">/</param>
-            </result>
+	        <result type="redirect" >/</result>
             <result name="input">/jsp/login/login.jsp</result>
         </action>
         
