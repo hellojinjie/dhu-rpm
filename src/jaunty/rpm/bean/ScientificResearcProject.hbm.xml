@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 1, 2010 8:29:04 PM by Hibernate Tools 3.3.0.GA -->
+<hibernate-mapping>
+    <class name="jaunty.rpm.bean.ScientificResearcProject" table="SCIENTIFIC_RESEARC_PROJECT" schema="RPM">
+        <id name="projectId" type="big_decimal">
+            <column name="PROJECT_ID" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="projectName" type="string">
+            <column name="PROJECT_NAME" length="128" not-null="true" />
+        </property>
+        <property name="projectFund" type="big_decimal">
+            <column name="PROJECT_FUND" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="projectAttribute" type="big_decimal">
+            <column name="PROJECT_ATTRIBUTE" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="fundOrigin" type="string">
+            <column name="FUND_ORIGIN" length="256" not-null="true" />
+        </property>
+        <property name="projectClass" type="string">
+            <column name="PROJECT_CLASS" length="128" not-null="true" />
+        </property>
+        <property name="contractFund" type="big_decimal">
+            <column name="CONTRACT_FUND" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="note" type="string">
+            <column name="NOTE" length="256" />
+        </property>
+    </class>
+</hibernate-mapping>

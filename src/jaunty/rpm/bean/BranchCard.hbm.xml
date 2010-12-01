@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 1, 2010 8:29:04 PM by Hibernate Tools 3.3.0.GA -->
+<hibernate-mapping>
+    <class name="jaunty.rpm.bean.BranchCard" table="BRANCH_CARD_MANAGE" schema="RPM">
+        <id name="branchCardId" type="big_decimal">
+            <column name="BRANCH_CARD_ID" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="totalCardId" type="big_decimal">
+            <column name="TOTAL_CARD_ID" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="content" type="string">
+            <column name="CONTENT" length="256" not-null="true" />
+        </property>
+        <property name="moneyUsetId" type="string">
+            <column name="MONEY_USET_ID" length="20" not-null="true" />
+        </property>
+        <property name="moneyGetDate" type="date">
+            <column name="MONEY_GET_DATE" length="7" not-null="true" />
+        </property>
+        <property name="note" type="string">
+            <column name="NOTE" length="256" />
+        </property>
+    </class>
+</hibernate-mapping>

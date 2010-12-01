@@ -1,0 +1,105 @@
+H3 {
+	LINE-HEIGHT: 18px; FONT-SIZE: 1em; FONT-WEIGHT: bold
+}
+.picnews {
+	MARGIN-BOTTOM: 20px
+}
+.picnews UL.stories {
+	PADDING-BOTTOM: 1px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+.picnews UL.stories LI {
+	PADDING-BOTTOM: 1px; MARGIN: 0px 0px 20px; PADDING-LEFT: 0px; WIDTH: 100%; PADDING-RIGHT: 0px; FLOAT: left; COLOR: #666; PADDING-TOP: 0px
+}
+.picnews UL.stories LI H3 {
+	COLOR: #333; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+.picnews UL.stories LI H3 A {
+	COLOR: #333; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+.picnews UL.stories LI H3 A {
+	PADDING-LEFT: 20px; BACKGROUND: url(images/icon_1.gif) no-repeat 0px -28px
+}
+.picnews UL.stories LI H3 A:visited {
+	COLOR: #666
+}
+.picnews UL.stories LI H3 A:hover {
+	COLOR: #2971a7
+}
+.picnews UL.stories LI P {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 180%; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; COLOR: #59595b; PADDING-TOP: 0px
+}
+.picnews UL.stories LI P.date {
+	WHITE-SPACE: nowrap; COLOR: #8c8c8c; FONT-SIZE: 11px
+}
+.picnews UL.stories LI SPAN {
+	WHITE-SPACE: nowrap; COLOR: #8c8c8c; FONT-SIZE: 11px
+}
+.picnews UL.stories LI P.date {
+	MARGIN-BOTTOM: 0.2em
+}
+.picnews UL.stories LI P SPAN {
+	PADDING-RIGHT: 0.5em; FONT-SIZE: 12px
+}
+.picnews UL.stories LI P SPAN A {
+	COLOR: #8c8c8c
+}
+.picnews UL.stories LI P SPAN A:hover {
+	COLOR: #2971a7
+}
+.picnews .featured {
+	BORDER-BOTTOM: #d3d3d3 1px solid; PADDING-BOTTOM: 0.6em; MARGIN-BOTTOM: 3em
+}
+.picnews .featured LI {
+	PADDING-BOTTOM: 1em; PADDING-LEFT: 165px
+}
+.picnews LI IMG.left {
+	MARGIN: 0px 16px 16px 0px; WIDTH: 175px; HEIGHT: 125px
+}
+.mznewp {
+	MARGIN: 30px 0px 10px
+}
+.Content {
+	TEXT-ALIGN: justify; MARGIN: auto; WIDTH: 960px; BACKGROUND: #ffffff; OVERFLOW: hidden
+}
+.ReplyContent {
+	PADDING-BOTTOM: 30px; PADDING-LEFT: 30px; PADDING-RIGHT: 30px; PADDING-TOP: 30px
+}
+.newstitle {
+	TEXT-ALIGN: center; MARGIN: 25px auto auto; WIDTH: 60%; FONT-FAMILY: ��������; FONT-SIZE: 22px
+}
+.fbinfo {
+	TEXT-ALIGN: center; COLOR: #999999
+}
+.bbstitle {
+	WIDTH: 100%
+}
+.bbstxt {
+	WIDTH: 100%
+}
+.NewsList {
+	MARGIN: auto; WIDTH: 90%
+}
+.NewsList .n {
+	LINE-HEIGHT: 260%; PADDING-LEFT: 18px !important; MARGIN-LEFT: 30px
+}
+.bbsReview {
+	MARGIN: auto; WIDTH: 90%
+}
+.helpmore {
+	MARGIN: auto; WIDTH: 90%
+}
+.m_Inc {
+	TEXT-ALIGN: left; LINE-HEIGHT: 200%; MARGIN: auto; WIDTH: 640px; FONT-SIZE: 14px
+}
+.bbstxt {
+	BORDER-BOTTOM: #cccccc 1px dashed; BORDER-LEFT: #cccccc 1px dashed; PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; OVERFLOW: hidden; BORDER-TOP: #cccccc 1px dashed; BORDER-RIGHT: #cccccc 1px dashed; PADDING-TOP: 10px
+}
+.bbstxt .topictitle {
+	BORDER-BOTTOM: #e8e8e8 1px dashed; BACKGROUND: #f8f8f8
+}
+.bbstxt .topicbody {
+	PADDING-BOTTOM: 20px; LINE-HEIGHT: 200%; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 5px
+}
+.newsmzmobiles {
+	MARGIN: auto; WIDTH: 94%
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 1, 2010 8:29:04 PM by Hibernate Tools 3.3.0.GA -->
+<hibernate-mapping>
+    <class name="jaunty.rpm.bean.Department" table="DEPARTMENT_MANAGE" schema="RPM">
+        <id name="departmentId" type="big_decimal">
+            <column name="DEPARTMENT_ID" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="departmentName" type="string">
+            <column name="DEPARTMENT_NAME" length="128" not-null="true" />
+        </property>
+        <property name="managerId" type="big_decimal">
+            <column name="MANAGER_ID" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="projectId" type="big_decimal">
+            <column name="PROJECT_ID" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="note" type="string">
+            <column name="NOTE" length="256" />
+        </property>
+    </class>
+</hibernate-mapping>

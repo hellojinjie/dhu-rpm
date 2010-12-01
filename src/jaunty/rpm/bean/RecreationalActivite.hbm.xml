@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 1, 2010 8:29:04 PM by Hibernate Tools 3.3.0.GA -->
+<hibernate-mapping>
+    <class name="jaunty.rpm.bean.RecreationalActivite" table="RECREATIONAL_ACTIVITES" schema="RPM">
+        <composite-id name="id" class="jaunty.rpm.bean.RecreationalActivitesId">
+            <key-property name="pecreationalId" type="big_decimal">
+                <column name="PECREATIONAL_ID" precision="22" scale="0" />
+            </key-property>
+            <key-property name="recreationalName" type="string">
+                <column name="RECREATIONAL_NAME" length="128" />
+            </key-property>
+            <key-property name="projectId" type="big_decimal">
+                <column name="PROJECT_ID" precision="22" scale="0" />
+            </key-property>
+            <key-property name="recreationalAttribute" type="big_decimal">
+                <column name="RECREATIONAL_ATTRIBUTE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="activitiesDate" type="date">
+                <column name="ACTIVITIES_DATE" length="7" />
+            </key-property>
+            <key-property name="activitiesPlace" type="string">
+                <column name="ACTIVITIES_PLACE" length="128" />
+            </key-property>
+            <key-property name="note" type="string">
+                <column name="NOTE" length="256" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

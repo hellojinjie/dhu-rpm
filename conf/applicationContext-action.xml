@@ -14,4 +14,7 @@
 		<property name="userManager" ref="userManager"></property>
 	</bean>
 	
+	<bean id="projectAction" class="jaunty.rpm.action.project.ProjectManagement" scope="prototype">
+	</bean>
+	
 </beans>
