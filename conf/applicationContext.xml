@@ -59,6 +59,15 @@
 		<property name="mappingResources">
 			<list>
 				<value>jaunty/rpm/bean/User.hbm.xml</value>
+				<value>jaunty/rpm/bean/BranchCard.hbm.xml</value>
+				<value>jaunty/rpm/bean/Base.hbm.xml</value>
+				<value>jaunty/rpm/bean/Department.hbm.xml</value>
+				<value>jaunty/rpm/bean/IntellectualPropertyRight.hbm.xml</value>
+				<value>jaunty/rpm/bean/Paper.hbm.xml</value>
+				<value>jaunty/rpm/bean/RecreationalActivite.hbm.xml</value>
+				<value>jaunty/rpm/bean/ScientificResarchAchievement.hbm.xml</value>
+				<value>jaunty/rpm/bean/ScientificResearcProject.hbm.xml</value>
+				<value>jaunty/rpm/bean/TotalCard.hbm.xml</value>
 			</list>
 		</property>
 		<property name="hibernateProperties">

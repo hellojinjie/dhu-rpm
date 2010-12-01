@@ -4,7 +4,7 @@
 <!-- Generated Dec 1, 2010 8:29:04 PM by Hibernate Tools 3.3.0.GA -->
 <hibernate-mapping>
     <class name="jaunty.rpm.bean.RecreationalActivite" table="RECREATIONAL_ACTIVITES" schema="RPM">
-        <composite-id name="id" class="jaunty.rpm.bean.RecreationalActivitesId">
+        <composite-id name="id" class="jaunty.rpm.bean.RecreationalActiviteId">
             <key-property name="pecreationalId" type="big_decimal">
                 <column name="PECREATIONAL_ID" precision="22" scale="0" />
             </key-property>
