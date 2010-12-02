@@ -1,0 +1,4 @@
+<!--新闻列表结束-->
+<DIV style="PADDING-LEFT: 10px">
+    <DIV class=scott><A href="javascript:;"><IMG src="<s:url value="/images/prev_1.gif" />"></A></A><A href="javascript:;"><IMG src="<s:url value="/images/prev_2.gif" />"></A><SPAN class=current>1</SPAN><A href="http://www.meizu.com/news/mznews_2.html">2</A><A href="http://www.meizu.com/news/mznews_3.html">3</A><A href="http://www.meizu.com/news/mznews_4.html">4</A><A href="http://www.meizu.com/news/mznews_5.html">5</A><A href="http://www.meizu.com/news/mznews_6.html">6</A><A href="http://www.meizu.com/news/mznews_7.html">7</A><A href="http://www.meizu.com/news/mznews_8.html">8</A><A title=下一页 href="http://www.meizu.com/news/mznews_2.html"><IMG src="<s:url value="/images/next_2.gif" />"></A><A title=最后页 href="http://www.meizu.com/news/mznews_8.html"><IMG src="<s:url value="/images/next_1.gif" />"></A></DIV>
+</DIV>
