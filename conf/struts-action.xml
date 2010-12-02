@@ -26,6 +26,14 @@
     	<action name="index" class="projectAction">
     		<result>/jsp/project/project.jsp</result>
     	</action>
+    	
+    	<action name="vertical" class="projectVerticalAction">
+    		<result>/jsp/project/project_vertical.jsp</result>
+    	</action>
+        
+        <action name="horizontal" class="projectHorizontalAction">
+    		<result>/jsp/project/project_horizontal.jsp</result>
+    	</action>
     
     </package>
     

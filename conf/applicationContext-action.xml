@@ -16,5 +16,11 @@
 	
 	<bean id="projectAction" class="jaunty.rpm.action.project.ProjectManagement" scope="prototype">
 	</bean>
+		
+	<bean id="projectVerticalAction" class="jaunty.rpm.action.project.ProjectVerticalManagement" scope="prototype">
+	</bean>
+	
+	<bean id="projectHorizontalAction" class="jaunty.rpm.action.project.ProjectHorizontalManagement" scope="prototype">
+	</bean>
 	
 </beans>
