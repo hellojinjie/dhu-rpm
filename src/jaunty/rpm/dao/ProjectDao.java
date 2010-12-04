@@ -2,6 +2,7 @@ package jaunty.rpm.dao;
 
 import jaunty.rpm.bean.ScientificResearcProject;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
@@ -23,5 +24,9 @@ public class ProjectDao extends HibernateDaoSupport {
 	@SuppressWarnings("unchecked")
 	public List<ScientificResearcProject> getAll() {
 		return this.getHibernateTemplate().find("from ScientificResearcProject");
+	}
+	
+	public ScientificResearcProject getById(BigDecimal id) {
+		return this.getHibernateTemplate().load(ScientificResearcProject.class, id);
 	}
 }

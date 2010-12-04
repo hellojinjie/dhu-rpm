@@ -6,6 +6,7 @@ import jaunty.rpm.service.ProjectManager;
 import jaunty.rpm.service.ProjectMemberManager;
 
 import java.math.BigDecimal;
+import java.util.LinkedList;
 import java.util.List;
 
 import com.opensymphony.xwork2.ActionSupport;
@@ -26,6 +27,8 @@ public class ProjectVerticalManagement extends ActionSupport {
 	private String anticipator;
 
 	private List<ScientificResearcProject> projects;
+
+	private BigDecimal id;
 	
 	public String index() {
 		
@@ -58,6 +61,20 @@ public class ProjectVerticalManagement extends ActionSupport {
 		return SUCCESS;
 	}
 
+	public String detail() {
+		ScientificResearcProject project = projectManager.getById(id);
+		projects = new LinkedList<ScientificResearcProject>();
+		projects.add(project);
+		return SUCCESS;
+	}
+	
+	public String edit() {
+		
+		
+		
+		return SUCCESS;
+	}
+	
 	public String getProjectName() {
 		return projectName;
 	}
@@ -142,6 +159,20 @@ public class ProjectVerticalManagement extends ActionSupport {
 	 */
 	public List<ScientificResearcProject> getProjects() {
 		return projects;
+	}
+
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(BigDecimal id) {
+		this.id = id;
+	}
+
+	/**
+	 * @return the id
+	 */
+	public BigDecimal getId() {
+		return id;
 	}
 	
 }

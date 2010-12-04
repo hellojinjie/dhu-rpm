@@ -11,6 +11,7 @@
 <link href="<s:url value="/styles/web.css" />" type="text/css" rel="stylesheet" />
 <link href="<s:url value="/styles/index.css" />" rel="stylesheet" type="text/css" />
 <link href="<s:url value="/styles/c_about.css" />" type="text/css" rel="stylesheet" />
+<script language="JavaScript" src="<s:url value="/js/jquery.min.js" />" type="text/javascript"></script>
 <style type="text/css">
 <!--
 #CopyRight,#Footer {

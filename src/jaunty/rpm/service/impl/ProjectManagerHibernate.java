@@ -4,6 +4,7 @@ import jaunty.rpm.bean.ScientificResearcProject;
 import jaunty.rpm.dao.ProjectDao;
 import jaunty.rpm.service.ProjectManager;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import org.springframework.transaction.annotation.Transactional;
@@ -31,6 +32,11 @@ public class ProjectManagerHibernate implements ProjectManager {
 	@Override
 	public void modify(ScientificResearcProject project) {
 		
+	}
+	
+	@Override
+	public ScientificResearcProject getById(BigDecimal id) {
+		return projectDao.getById(id);
 	}
 	
 	public void setProjectDao(ProjectDao projectDao) {

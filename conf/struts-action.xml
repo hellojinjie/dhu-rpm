@@ -35,14 +35,22 @@
     		<result>/jsp/project/project_horizontal.jsp</result>
     	</action>
     
-    	<action name="addProject" class="projectVerticalAction" method="addProject">
+    	<action name="v_addProject" class="projectVerticalAction" method="addProject">
     		<result name="success" type="redirectAction">
     			<param name="actionName">vertical</param>
     			<param name="namespace">/project</param>
     		</result>
     		<result name="input">/jsp/project/project_vertical.jsp</result>
     	</action>
+    	
+    	<action name="v_detail" class="projectVerticalAction" method="detail">
+    		<result>/jsp/project/project_vertical_detail.jsp</result>
+    	</action>
     
+    	<action name="v_edit" class="projectVerticalAction" method="detail">
+    		<result>/jsp/project/project_vertical.jsp</result>
+    		<result name="input">/jsp/project/project_vertical.jsp</result>
+    	</action>
     </package>
     
     <package name="department" namespace="/department" extends="rpm-default">

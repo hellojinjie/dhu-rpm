@@ -1,10 +1,13 @@
 package jaunty.rpm.service.impl;
 
-import org.springframework.transaction.annotation.Transactional;
-
 import jaunty.rpm.bean.ProjectMember;
 import jaunty.rpm.dao.ProjectMemberDao;
 import jaunty.rpm.service.ProjectMemberManager;
+
+import java.math.BigDecimal;
+import java.util.List;
+
+import org.springframework.transaction.annotation.Transactional;
 
 @Transactional
 public class ProjectMemberManagerHibernate implements ProjectMemberManager {
@@ -16,6 +19,11 @@ public class ProjectMemberManagerHibernate implements ProjectMemberManager {
 		this.projectMemberDao.add(projectMember);
 	}
 
+	@Override
+	public List<ProjectMember> getByProjectId(BigDecimal projectId) {
+		return this.projectMemberDao.getByProjectId(projectId);
+	}
+	
 	public ProjectMemberDao getProjectMemberDao() {
 		return projectMemberDao;
 	}
