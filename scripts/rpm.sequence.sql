@@ -1,0 +1,10 @@
+create sequence seq_BASE_id;
+create sequence seq_BRANCH_CARD_id;
+create sequence seq_DEPARTMENT_id;
+create sequence seq_PROPERTY_RIGHTS_id;
+create sequence seq_PAPER_id;
+create sequence seq_RECREATIONAL_ACTIVITES_id;
+create sequence seq_pACHIEVEMENT_id;
+create sequence seq_RESEARC_PROJECT_id;
+create sequence seq_TOTAL_CARD_id;
+create sequence seq_USER_id;

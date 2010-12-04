@@ -18,10 +18,24 @@
 		<property name="userDao" ref="userDao"></property>
 	</bean>
 	
+	<bean id="projectManager" class="jaunty.rpm.service.impl.ProjectManagerHibernate">
+		<property name="projectDao" ref="projectDao"></property>
+	</bean>
+	<bean id="projectMemberManager" class="jaunty.rpm.service.impl.ProjectMemberManagerHibernate">
+		<property name="projectMemberDao" ref="projectMemberDao"></property>
+	</bean>
+	
 	
 	<!-- data access object -->
 
 	<bean id="userDao" class="jaunty.rpm.dao.UserDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="projectDao" class="jaunty.rpm.dao.ProjectDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="projectMemberDao" class="jaunty.rpm.dao.ProjectMemberDao">
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
 </beans>

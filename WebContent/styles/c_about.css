@@ -8,7 +8,7 @@ H3 {
 	PADDING-BOTTOM: 1px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
 }
 .picnews UL.stories LI {
-	PADDING-BOTTOM: 1px; MARGIN: 0px 0px 20px; PADDING-LEFT: 0px; WIDTH: 100%; PADDING-RIGHT: 0px; FLOAT: left; COLOR: #666; PADDING-TOP: 0px
+	PADDING-BOTTOM: 1px; MARGIN: 0px 0px 10px; PADDING-LEFT: 0px; WIDTH: 100%; PADDING-RIGHT: 0px; FLOAT: left;PADDING-TOP: 0px
 }
 .picnews UL.stories LI H3 {
 	COLOR: #333; FONT-SIZE: 14px; FONT-WEIGHT: bold
@@ -32,7 +32,7 @@ H3 {
 	WHITE-SPACE: nowrap; COLOR: #8c8c8c; FONT-SIZE: 11px
 }
 .picnews UL.stories LI SPAN {
-	WHITE-SPACE: nowrap; COLOR: #8c8c8c; FONT-SIZE: 11px
+	WHITE-SPACE: nowrap; FONT-SIZE: 11px
 }
 .picnews UL.stories LI P.date {
 	MARGIN-BOTTOM: 0.2em
@@ -40,9 +40,7 @@ H3 {
 .picnews UL.stories LI P SPAN {
 	PADDING-RIGHT: 0.5em; FONT-SIZE: 12px
 }
-.picnews UL.stories LI P SPAN A {
-	COLOR: #8c8c8c
-}
+
 .picnews UL.stories LI P SPAN A:hover {
 	COLOR: #2971a7
 }
@@ -65,7 +63,7 @@ H3 {
 	PADDING-BOTTOM: 30px; PADDING-LEFT: 30px; PADDING-RIGHT: 30px; PADDING-TOP: 30px
 }
 .newstitle {
-	TEXT-ALIGN: center; MARGIN: 25px auto auto; WIDTH: 60%; FONT-FAMILY: ��������; FONT-SIZE: 22px
+	TEXT-ALIGN: center; MARGIN: 25px auto auto; WIDTH: 60%; FONT-SIZE: 22px
 }
 .fbinfo {
 	TEXT-ALIGN: center; COLOR: #999999
@@ -102,4 +100,7 @@ H3 {
 }
 .newsmzmobiles {
 	MARGIN: auto; WIDTH: 94%
+}
+.errorMessage li{
+color: red;
 }

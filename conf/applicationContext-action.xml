@@ -18,6 +18,8 @@
 	</bean>
 		
 	<bean id="projectVerticalAction" class="jaunty.rpm.action.project.ProjectVerticalManagement" scope="prototype">
+		<property name="projectManager" ref="projectManager"></property>
+		<property name="projectMemberManager" ref="projectMemberManager"></property>
 	</bean>
 	
 	<bean id="projectHorizontalAction" class="jaunty.rpm.action.project.ProjectHorizontalManagement" scope="prototype">

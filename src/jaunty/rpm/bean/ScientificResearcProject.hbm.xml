@@ -6,7 +6,9 @@
     <class name="jaunty.rpm.bean.ScientificResearcProject" table="SCIENTIFIC_RESEARC_PROJECT" schema="RPM">
         <id name="projectId" type="big_decimal">
             <column name="PROJECT_ID" precision="22" scale="0" />
-            <generator class="assigned" />
+            <generator class="sequence">
+            	 <param name="sequence">SEQ_PROJECT_ID</param>
+            </generator>
         </id>
         <property name="projectName" type="string">
             <column name="PROJECT_NAME" length="128" not-null="true" />

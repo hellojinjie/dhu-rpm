@@ -133,3 +133,6 @@ float: left;
 }
 
 
+.errorMessage {
+	color: red;	
+}

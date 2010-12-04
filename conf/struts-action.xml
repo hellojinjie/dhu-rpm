@@ -27,12 +27,20 @@
     		<result>/jsp/project/project.jsp</result>
     	</action>
     	
-    	<action name="vertical" class="projectVerticalAction">
+    	<action name="vertical" class="projectVerticalAction" method="index">
     		<result>/jsp/project/project_vertical.jsp</result>
     	</action>
         
         <action name="horizontal" class="projectHorizontalAction">
     		<result>/jsp/project/project_horizontal.jsp</result>
+    	</action>
+    
+    	<action name="addProject" class="projectVerticalAction" method="addProject">
+    		<result name="success" type="redirectAction">
+    			<param name="actionName">vertical</param>
+    			<param name="namespace">/project</param>
+    		</result>
+    		<result name="input">/jsp/project/project_vertical.jsp</result>
     	</action>
     
     </package>
