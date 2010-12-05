@@ -47,9 +47,25 @@
     		<result>/jsp/project/project_vertical_detail.jsp</result>
     	</action>
     
-    	<action name="v_edit" class="projectVerticalAction" method="detail">
-    		<result>/jsp/project/project_vertical.jsp</result>
-    		<result name="input">/jsp/project/project_vertical.jsp</result>
+    	<action name="v_edit" class="projectVerticalAction" method="edit">
+    		<result>/jsp/project/project_vertical_edit.jsp</result>
+    		<result name="input">/jsp/project/project_vertical_edit.jsp</result>
+    	</action>
+    	    
+    	<action name="v_modify" class="projectVerticalAction" method="modify">
+    		<result type="redirectAction">
+    			<param name="actionName">v_detail</param>
+    			<param name="namespace">/project</param>
+    			<param name="id">${id}</param>
+    		</result>
+    		<result name="input">/jsp/project/project_vertical_edit.jsp</result>
+    	</action>
+    	
+    	<action name="v_delete" class="projectVerticalAction" method="delete">
+    		<result type="redirectAction">
+    			<param name="actionName">vertical</param>
+    			<param name="namespace">/project</param>
+    		</result>
     	</action>
     </package>
     

@@ -34,7 +34,7 @@
                             <br />
                             <hr />
                             项目参与者：
-                            <s:property value="anticiptor" />
+                            <s:property value="anticipator" />
                             <br/>
                             项目类别：
                             <s:property value="projectClass" />
@@ -44,8 +44,12 @@
                             <br/>
                             项目描述：
                             <s:property value="note" />
+							<br/>
+							<p/>
+							<a href="<s:url action="v_edit" namespace="/project" ><s:param name="id" value="%{projectId}"/></s:url>">修改</a>	
+                            <a href="<s:url action="v_delete" namespace="/project" ><s:param name="id" value="%{projectId}"/></s:url>">删除</a>						
                         </s:iterator>
-                    </UL>
+					</UL>
                 </DIV>
                 <DIV class=picnews>
                     <UL class=stories featured>

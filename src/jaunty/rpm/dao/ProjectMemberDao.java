@@ -15,7 +15,7 @@ public class ProjectMemberDao extends HibernateDaoSupport {
 	
 	@SuppressWarnings("unchecked")
 	public List<ProjectMember> getByProjectId(BigDecimal projectId) {
-		return this.getHibernateTemplate().find("from ProjectMember wher projectId = ?", projectId);
+		return this.getHibernateTemplate().find("from ProjectMember where projectId = ?", projectId);
 	}
 	
 }

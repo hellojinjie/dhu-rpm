@@ -21,7 +21,7 @@ public class ProjectManagerHibernate implements ProjectManager {
 
 	@Override
 	public void delete(ScientificResearcProject project) {
-		
+		this.projectDao.delete(project);
 	}
 
 	@Override
@@ -31,7 +31,7 @@ public class ProjectManagerHibernate implements ProjectManager {
 
 	@Override
 	public void modify(ScientificResearcProject project) {
-		
+		this.projectDao.modify(project);
 	}
 	
 	@Override

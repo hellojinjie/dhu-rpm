@@ -1,1 +1,3 @@
 /build
+.classpath
+/conf/jdbc.properties

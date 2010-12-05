@@ -9,11 +9,15 @@ import java.math.BigDecimal;
 import java.util.LinkedList;
 import java.util.List;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
 import com.opensymphony.xwork2.ActionSupport;
 
 public class ProjectVerticalManagement extends ActionSupport {
 
 	private static final long serialVersionUID = 8220251235825319078L;
+	private static final Log log = LogFactory.getLog(ProjectVerticalManagement.class);
 
 	private ProjectManager projectManager;
 	private ProjectMemberManager projectMemberManager;
@@ -65,12 +69,55 @@ public class ProjectVerticalManagement extends ActionSupport {
 		ScientificResearcProject project = projectManager.getById(id);
 		projects = new LinkedList<ScientificResearcProject>();
 		projects.add(project);
+		
+		List<ProjectMember> members = projectMemberManager.getByProjectId(project.getProjectId());
+		anticipator = "";
+		for (ProjectMember member : members) {
+			anticipator += member.getMember();
+			anticipator += ", ";
+		}
+		log.debug("project anticiptor are:" + anticipator);
 		return SUCCESS;
 	}
 	
 	public String edit() {
 		
+		ScientificResearcProject project = projectManager.getById(id);
 		
+		this.projectAttribute = project.getProjectAttribute();
+		this.projectClass = project.getProjectClass();
+		this.contractFund = project.getContractFund().toPlainString();
+		this.fundOrigin = project.getFundOrigin();
+		this.note = project.getNote();
+		this.projectName = project.getProjectName();
+		
+		List<ProjectMember> members = projectMemberManager.getByProjectId(project.getProjectId());
+		anticipator = "";
+		for (ProjectMember member : members) {
+			anticipator += member.getMember();
+			anticipator += ", ";
+		}
+		return SUCCESS;
+	}
+	
+	public String modify() {
+
+		ScientificResearcProject project = projectManager.getById(id);
+		project.setContractFund(new BigDecimal(contractFund));
+		project.setProjectFund(new BigDecimal(contractFund));
+		project.setFundOrigin(fundOrigin);
+		project.setNote(note);
+		project.setProjectAttribute(new BigDecimal(2));
+		project.setProjectName(projectName);
+		project.setProjectClass(projectClass);
+		projectManager.modify(project);
+		
+		return SUCCESS;
+	}
+	
+	public String delete() {
+		
+		this.projectManager.delete(this.projectManager.getById(id));
 		
 		return SUCCESS;
 	}
@@ -147,30 +194,18 @@ public class ProjectVerticalManagement extends ActionSupport {
 		return anticipator;
 	}
 
-	/**
-	 * @param projects the projects to set
-	 */
 	public void setProjects(List<ScientificResearcProject> projects) {
 		this.projects = projects;
 	}
 
-	/**
-	 * @return the projects
-	 */
 	public List<ScientificResearcProject> getProjects() {
 		return projects;
 	}
 
-	/**
-	 * @param id the id to set
-	 */
 	public void setId(BigDecimal id) {
 		this.id = id;
 	}
 
-	/**
-	 * @return the id
-	 */
 	public BigDecimal getId() {
 		return id;
 	}
