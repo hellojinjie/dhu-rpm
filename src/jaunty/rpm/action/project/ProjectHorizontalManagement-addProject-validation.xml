@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC
+  		"-//OpenSymphony Group//XWork Validator 1.0//EN" 
+  		"http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+
+<validators>
+	<field name="projectName">
+		<field-validator type="requiredstring">
+			<message>请填写项目名称</message>
+		</field-validator>
+	</field>
+	<field name="projectClass">
+		<field-validator type="requiredstring">
+			<message>请填写项目类别</message>
+		</field-validator>
+	</field>
+	<field name="fundOrigin">
+		<field-validator type="requiredstring">
+			<message>请填写经费来源</message>
+		</field-validator>
+	</field>
+	<field name="contractFund">
+		<field-validator type="required">
+			<message>请填写经费额度</message>
+		</field-validator>
+		<field-validator type="int">
+			<message>请填写经费额度</message>
+		</field-validator>
+	</field>
+	<field name="anticipator">
+		<field-validator type="requiredstring">
+			<message>请填写参与人</message>
+		</field-validator>
+	</field>
+	<field name="note">
+		<field-validator type="requiredstring">
+			<message>请填写详细信息</message>
+		</field-validator>
+	</field>
+	
+</validators>

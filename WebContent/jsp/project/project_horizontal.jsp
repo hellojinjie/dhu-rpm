@@ -28,26 +28,65 @@
                 <!--新闻列表开始-->
                 <DIV class=picnews>
                     <UL class=stories featured>
-                       <!-- put things here -->
-                       <table width="200" border="0">
-                           <tr>
-                               <td>1</td>
-                               <td>2</td>
-                               <td>3</td>
-                           </tr>
-                           <tr>
-                               <td>4</td>
-                               <td>5</td>
-                               <td>6</td>
-                           </tr>
-                           <tr>
-                               <td>7</td>
-                               <td>8</td>
-                               <td>9</td>
-                           </tr>
-                       </table>
+                        <!-- 这里放内容 -->
+                        项目列表： <br />
+                        <ul>
+                            <table border="0">
+                                <tr>
+                                    <td width="194" bgcolor="#99CCFF">项目名称</td>
+                                    <td width="123" bgcolor="#99CCFF">项目类别</td>
+                                    <td width="122"></td>
+                                </tr>
+                                <s:iterator value="projects">
+                                    <tr>
+                                        <td><s:property value="projectName"/></td>
+                                        <td><s:property value="projectClass"/></td>
+                                        <td><a href="#" id="<s:property value="projectID"/>">详细信息</a></td>
+                                    </tr>
+                                </s:iterator>
+                            </table>
+                        </ul>
+                        <hr />
+                        增加项目： <br />
+                        <s:fielderror />
+                        <s:form action="addProject" namespace="/project" theme="simple">
+                            <table>
+                                <tr>
+                                    <td> 项目名称：
+                                        <s:textfield name="projectName" lable="项目名称" />
+                                    </td>
+                                    <td> 经费来源：
+                                        <s:textfield name="fundOrigin" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td> 项目类别：
+                                        <s:select name="projectClass" headerKey="-1" headerValue="选择类别" 
+									list="#{'学术研究':'学术研究', '应用工程':'应用工程'}" required="true"/>
+                                    </td>
+                                    <td> 经费额度：
+                                        <s:textfield name="contractFund" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"> 参与人：<br/>
+                                        <s:textfield name="anticipator" size="78"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"> 项目详细信息：<br/>
+                                        <s:textarea name="note" rows="5" cols="60"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><s:submit value="增加" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </s:form>
                     </UL>
                 </DIV>
+                
                 <DIV class=picnews>
                     <UL class=stories featured>
                         <!-- put things here -->
