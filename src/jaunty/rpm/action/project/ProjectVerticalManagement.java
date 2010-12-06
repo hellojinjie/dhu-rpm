@@ -36,7 +36,7 @@ public class ProjectVerticalManagement extends ActionSupport {
 	
 	public String index() {
 		
-		setProjects(projectManager.getAll());
+		setProjects(projectManager.getByAttribute(new BigDecimal(2)));
 		
 		return SUCCESS;
 	}

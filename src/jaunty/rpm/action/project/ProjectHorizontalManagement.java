@@ -191,18 +191,20 @@ public class ProjectHorizontalManagement extends ActionSupport {
 		return anticipator;
 	}
 
-	/**
-	 * @param projects the projects to set
-	 */
 	public void setProjects(List<ScientificResearcProject> projects) {
 		this.projects = projects;
 	}
 
-	/**
-	 * @return the projects
-	 */
 	public List<ScientificResearcProject> getProjects() {
 		return projects;
+	}
+
+	public BigDecimal getId() {
+		return id;
+	}
+
+	public void setId(BigDecimal id) {
+		this.id = id;
 	}
 
 }

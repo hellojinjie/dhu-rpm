@@ -46,8 +46,8 @@
                             <s:property value="note" />
 							<br/>
 							<p/>
-							<a href="<s:url action="h_edit" namespace="/project" ><s:param name="id" value="%{projectId}"/></s:url>">修改</a>	
-                            <a href="<s:url action="h_delete" namespace="/project" ><s:param name="id" value="%{projectId}"/></s:url>">删除</a>						
+							<a href="<s:url action="v_edit" namespace="/project" ><s:param name="id" value="%{projectId}"/></s:url>">修改</a>	
+                            <a href="<s:url action="v_delete" namespace="/project" ><s:param name="id" value="%{projectId}"/></s:url>">删除</a>						
                         </s:iterator>
 					</UL>
                 </DIV>
