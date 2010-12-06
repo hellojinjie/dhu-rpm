@@ -41,7 +41,7 @@
                                     <tr>
                                         <td><s:property value="projectName"/></td>
                                         <td><s:property value="projectClass"/></td>
-                                        <td><a href="#" id="<s:property value="projectID"/>">详细信息</a></td>
+                                        <td><a href="<s:url action="h_detail" namespace="/project"><s:param name="id" value="%{projectId}"></s:param></s:url>" id="<s:property value="projectId"/>">详细信息</a></td>
                                     </tr>
                                 </s:iterator>
                             </table>
@@ -49,7 +49,7 @@
                         <hr />
                         增加项目： <br />
                         <s:fielderror />
-                        <s:form action="addProject" namespace="/project" theme="simple">
+                        <s:form action="h_addProject" namespace="/project" theme="simple">
                             <table>
                                 <tr>
                                     <td> 项目名称：

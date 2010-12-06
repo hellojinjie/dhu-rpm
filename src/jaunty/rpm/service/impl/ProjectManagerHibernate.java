@@ -39,6 +39,11 @@ public class ProjectManagerHibernate implements ProjectManager {
 		return projectDao.getById(id);
 	}
 	
+	@Override
+	public List<ScientificResearcProject> getByAttribute(BigDecimal attribute) {
+		return projectDao.getByAttribute(attribute);
+	}
+	
 	public void setProjectDao(ProjectDao projectDao) {
 		this.projectDao = projectDao;
 	}

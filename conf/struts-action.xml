@@ -31,7 +31,7 @@
     		<result>/jsp/project/project_vertical.jsp</result>
     	</action>
         
-        <action name="horizontal" class="projectHorizontalAction">
+        <action name="horizontal" class="projectHorizontalAction" method="index">
     		<result>/jsp/project/project_horizontal.jsp</result>
     	</action>
     
@@ -64,6 +64,38 @@
     	<action name="v_delete" class="projectVerticalAction" method="delete">
     		<result type="redirectAction">
     			<param name="actionName">vertical</param>
+    			<param name="namespace">/project</param>
+    		</result>
+    	</action>
+    	
+        <action name="h_addProject" class="projectHorizontalAction" method="addProject">
+    		<result name="success" type="redirectAction">
+    			<param name="actionName">horizontal</param>
+    			<param name="namespace">/project</param>
+    		</result>
+    		<result name="input">/jsp/project/project_horizontal.jsp</result>
+    	</action>
+    	
+    	<action name="h_detail" class="projectHorizontalAction" method="detail">
+    		<result>/jsp/project/project_horizontal_detail.jsp</result>
+    	</action>
+    
+    	<action name="h_edit" class="projectHorizontalAction" method="detail">
+    		<result>/jsp/project/project_horizontal.jsp</result>
+    		<result name="input">/jsp/project/project_horizontal.jsp</result>
+    	</action>
+    	<action name="h_modify" class="projectHorizontalAction" method="modify">
+    		<result type="redirectAction">
+    			<param name="actionName">h_detail</param>
+    			<param name="namespace">/project</param>
+    			<param name="id">${id}</param>
+    		</result>
+    		<result name="input">/jsp/project/project_horizontal_edit.jsp</result>
+    	</action>
+    	
+    	<action name="h_delete" class="projectHorizontalAction" method="delete">
+    		<result type="redirectAction">
+    			<param name="actionName">horizontal</param>
     			<param name="namespace">/project</param>
     		</result>
     	</action>

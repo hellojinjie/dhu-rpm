@@ -21,7 +21,7 @@
     <DIV class=right>
         <DIV class=pagebody>
             <DIV class=pagefirst></DIV>
-            <SPAN class="icontitle iconnews">纵向项目</SPAN>
+            <SPAN class="icontitle iconnews">横向项目</SPAN>
             <DIV class=clear></DIV>
             <!--内容开始-->
             <DIV class=NewsList>
@@ -34,7 +34,7 @@
                             <br />
                             <hr />
                             项目参与者：
-                            <s:property value="anticipator" />
+                            <s:property value="anticiptor" />
                             <br/>
                             项目类别：
                             <s:property value="projectClass" />
@@ -44,12 +44,8 @@
                             <br/>
                             项目描述：
                             <s:property value="note" />
-							<br/>
-							<p/>
-							<a href="<s:url action="h_edit" namespace="/project" ><s:param name="id" value="%{projectId}"/></s:url>">修改</a>	
-                            <a href="<s:url action="h_delete" namespace="/project" ><s:param name="id" value="%{projectId}"/></s:url>">删除</a>						
                         </s:iterator>
-					</UL>
+                    </UL>
                 </DIV>
                 <DIV class=picnews>
                     <UL class=stories featured>

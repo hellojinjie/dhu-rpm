@@ -29,27 +29,11 @@
                 <DIV class=picnews>
                     <UL class=stories featured>
                         <!-- 这里放内容 -->
-                        项目列表： <br/>
-                        <ul>
-                            <table border="0">
-                                <tr>
-                                    <td width="194" bgcolor="#99CCFF">项目名称</td>
-                                    <td width="123" bgcolor="#99CCFF">项目类别</td>
-                                    <td width="122"></td>
-                                </tr>
-                                <s:iterator value="projects">
-                                    <tr>
-                                        <td><s:property value="projectName"/></td>
-                                        <td><s:property value="projectClass"/></td>
-                                        <td><a href="<s:url action="v_detail" namespace="/project"><s:param name="id" value="%{projectId}"></s:param></s:url>" id="<s:property value="projectId"/>">详细信息</a></td>
-                                    </tr>
-                                </s:iterator>
-                            </table>
-                        </ul>
+                        修改项目： <br />
                         <hr />
-                        增加项目：<br/>
                         <s:fielderror />
-                        <s:form action="v_addProject" namespace="/project" theme="simple">
+                        <s:form action="v_modify" namespace="/project" theme="simple">
+                             <s:hidden name="id"></s:hidden>
                             <table>
                                 <tr>
                                     <td> 项目名称：

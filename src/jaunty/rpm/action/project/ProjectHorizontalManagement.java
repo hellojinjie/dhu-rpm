@@ -6,13 +6,18 @@ import jaunty.rpm.service.ProjectManager;
 import jaunty.rpm.service.ProjectMemberManager;
 
 import java.math.BigDecimal;
+import java.util.LinkedList;
 import java.util.List;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 import com.opensymphony.xwork2.ActionSupport;
 
 public class ProjectHorizontalManagement extends ActionSupport {
 
 	private static final long serialVersionUID = 5388061199956120262L;
+	private static final Log log = LogFactory.getLog(ProjectHorizontalManagement.class);
 	
 	private ProjectManager projectManager;
 	private ProjectMemberManager projectMemberManager;
@@ -27,10 +32,12 @@ public class ProjectHorizontalManagement extends ActionSupport {
 
 	private List<ScientificResearcProject> projects;
 	
+	private BigDecimal id;
+	
 	public String index() {
 		
-		setProjects(projectManager.getAll());
-		
+		setProjects(projectManager.getByAttribute(new BigDecimal(1)));
+		log.debug("we get projects : " + projects.size());
 		return SUCCESS;
 	}
 	
@@ -41,7 +48,7 @@ public class ProjectHorizontalManagement extends ActionSupport {
 		project.setProjectFund(new BigDecimal(contractFund));
 		project.setFundOrigin(fundOrigin);
 		project.setNote(note);
-		project.setProjectAttribute(new BigDecimal(2));
+		project.setProjectAttribute(new BigDecimal(1));
 		project.setProjectName(projectName);
 		project.setProjectClass(projectClass);
 		projectManager.add(project);
@@ -57,7 +64,61 @@ public class ProjectHorizontalManagement extends ActionSupport {
 		
 		return SUCCESS;
 	}
+	public String detail() {
+		ScientificResearcProject project = projectManager.getById(id);
+		projects = new LinkedList<ScientificResearcProject>();
+		projects.add(project);
+		
+		List<ProjectMember> members = projectMemberManager.getByProjectId(project.getProjectId());
+		anticipator = "";
+		for (ProjectMember member : members) {
+			anticipator += member.getMember();
+			anticipator += ", ";
+		}
+		log.debug("project anticiptor are:" + anticipator);
+		return SUCCESS;
+	}
+	public String edit() {
+		
+		ScientificResearcProject project = projectManager.getById(id);
+		
+		this.projectAttribute = project.getProjectAttribute();
+		this.projectClass = project.getProjectClass();
+		this.contractFund = project.getContractFund().toPlainString();
+		this.fundOrigin = project.getFundOrigin();
+		this.note = project.getNote();
+		this.projectName = project.getProjectName();
+		
+		List<ProjectMember> members = projectMemberManager.getByProjectId(project.getProjectId());
+		anticipator = "";
+		for (ProjectMember member : members) {
+			anticipator += member.getMember();
+			anticipator += ", ";
+		}
+		return SUCCESS;
+	}
+	
+	public String modify() {
 
+		ScientificResearcProject project = projectManager.getById(id);
+		project.setContractFund(new BigDecimal(contractFund));
+		project.setProjectFund(new BigDecimal(contractFund));
+		project.setFundOrigin(fundOrigin);
+		project.setNote(note);
+		project.setProjectAttribute(new BigDecimal(2));
+		project.setProjectName(projectName);
+		project.setProjectClass(projectClass);
+		projectManager.modify(project);
+		
+		return SUCCESS;
+	}
+	
+	public String delete() {
+		
+		this.projectManager.delete(this.projectManager.getById(id));
+		
+		return SUCCESS;
+	}
 	public String getProjectName() {
 		return projectName;
 	}

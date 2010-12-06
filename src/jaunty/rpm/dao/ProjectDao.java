@@ -26,6 +26,11 @@ public class ProjectDao extends HibernateDaoSupport {
 		return this.getHibernateTemplate().find("from ScientificResearcProject");
 	}
 	
+	@SuppressWarnings("unchecked")
+	public List<ScientificResearcProject> getByAttribute(BigDecimal attribute) {
+		return this.getHibernateTemplate().find("from ScientificResearcProject where projectAttribute = ?", attribute);
+	}
+	
 	public ScientificResearcProject getById(BigDecimal id) {
 		return this.getHibernateTemplate().load(ScientificResearcProject.class, id);
 	}

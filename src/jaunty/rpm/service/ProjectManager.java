@@ -17,4 +17,5 @@ public interface ProjectManager {
 	
 	public ScientificResearcProject getById(BigDecimal id);
 
+	public List<ScientificResearcProject> getByAttribute(BigDecimal attribute);
 }
