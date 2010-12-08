@@ -2,9 +2,15 @@
 <%@ taglib prefix="s" uri="/struts-tags"%>
 <s:include value="/jsp/header.jsp"></s:include>
 <SCRIPT type=text/javascript>
-	document.getElementById('mz-n1').className = 'n1';
+	document.getElementById('mz-n3').className = 'n3';
 	//-->
 </SCRIPT>
+<style type="text/css">
+<!--
+.STYLE1 {color: #0066FF}
+-->
+</style>
+
 
 <DIV class=pageadv><IMG border=0 src="<s:url value="/images/library.png" />" ></DIV>
 <DIV class=main>
@@ -12,7 +18,7 @@
         <DIV class=menuLab>
             <DIV class=leftmenu>
                 <UL>
-                    <LI id=Labone ><A href="#" target=_self><SPAN>论文管理</SPAN></A></LI>
+                    <LI id=Labone class=selected><A href="#" target=_self><SPAN>论文管理</SPAN></A></LI>
                     <LI id=MzLm_AboutMZ><A href="#" target=_self><SPAN>成果管理</SPAN></A></LI>
                     <LI id=MzLm_AboutMZ><A href="#" target=_self><SPAN>知识产权管理</SPAN></A></LI>
                     <LI id=MzLm_AboutMZ><A href="#" target=_self><SPAN>学术活动管理</SPAN></A></LI>
@@ -35,10 +41,10 @@
                         <ul>
                             <table border="0">
                                 <tr>
-                                    <td width="194" bgcolor="#99CCFF">论文名称</td>
-                                    <td width="123" bgcolor="#99CCFF">作者</td>
-                                    <td width="123" bgcolor="#99CCFF">所属项目</td>
-                                    <td width="123" bgcolor="#99CCFF">论文类别</td>
+                                    <td width="194"><span class="STYLE1">论文名称</span></td>
+                                    <td width="123"><span class="STYLE1">作者</span></td>
+                                    <td width="123"><span class="STYLE1">所属项目</span></td>
+                                    <td width="123"><span class="STYLE1">论文类别</span></td>
                                     <td width="122"></td>
                                 </tr>
                                 <s:iterator value="projects">
@@ -55,24 +61,22 @@
                         <hr />
                         论文新增：<br/>
                         <s:fielderror />
-                        <s:form action="v_addProject" namespace="/project" theme="simple">
+                        <s:form action="addPaper" namespace="/research" theme="simple">
                             <table>
                                 <tr>
                                     <td> 论文名称：
-                                        <s:textfield name="projectName" lable="项目名称" />
+                                        <s:textfield name="paperName" lable="项目名称" />
                                     </td>
                                     <td> 作者：
-                                        <s:textfield name="fundOrigin" />
+                                        <s:textfield name="paperAuthor" />
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td> 所属项目：
-                                        <s:select name="projectClass" headerKey="-1" headerValue="选择类别" 
-									list="#{'个人论文':'个人论文', '部门论文':'部门论文', '科研处论文':'科研处论文}" required="true"/>
-                                    </td>
                                     <td> 论文类别：
-                                        <s:textfield name="contractFund" />
+                                        <s:select name="paperAttribute" headerKey="-1" headerValue="选择类别" 
+									list="#{'1':'个人论文', '2':'部门论文', '3':'科研处论文'}" required="true"/>
                                     </td>
+                                  
                                 </tr>
                                
                                 <tr>

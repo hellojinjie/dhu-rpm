@@ -27,4 +27,11 @@
 		<property name="projectMemberManager" ref="projectMemberManager"></property>
 	</bean>
 	
+	<bean id="researchAction" class="jaunty.rpm.action.research.ResearchManagement">
+	</bean>
+	
+	<bean id="paperAction" class="jaunty.rpm.action.research.ResearchPaperManagement">
+		
+	</bean>
+	
 </beans>

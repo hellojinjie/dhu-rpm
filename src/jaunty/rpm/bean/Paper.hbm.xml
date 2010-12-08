@@ -12,10 +12,10 @@
             <column name="PAPER_NAME" length="128" not-null="true" />
         </property>
         <property name="projectId" type="big_decimal">
-            <column name="PROJECT_ID" precision="22" scale="0" not-null="true" />
+            <column name="PROJECT_ID" precision="22" scale="0"/>
         </property>
-        <property name="paperAuthor" type="big_decimal">
-            <column name="PAPER_AUTHOR" precision="22" scale="0" not-null="true" />
+        <property name="paperAuthor" type="string">
+            <column name="PAPER_AUTHOR" length="128" not-null="true" />
         </property>
         <property name="paperAttribute" type="big_decimal">
             <column name="PAPER_ATTRIBUTE" precision="22" scale="0" />

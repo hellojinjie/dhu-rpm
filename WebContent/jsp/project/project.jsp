@@ -21,7 +21,7 @@
     <DIV class=right>
         <DIV class=pagebody>
             <DIV class=pagefirst></DIV>
-            <SPAN class="icontitle iconnews">最新论文</SPAN>
+            <SPAN class="icontitle iconnews">最新项目</SPAN>
             <DIV class=clear></DIV>
             <!--内容开始-->
             <DIV class=NewsList>

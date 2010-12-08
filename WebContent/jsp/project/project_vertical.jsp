@@ -5,6 +5,12 @@
 	document.getElementById('mz-n1').className = 'n1';
 	//-->
 </SCRIPT>
+<style type="text/css">
+<!--
+.STYLE1 {color: #0066FF}
+-->
+</style>
+
 
 <DIV class=pageadv><IMG border=0 src="<s:url value="/images/library.png" />" ></DIV>
 <DIV class=main>
@@ -33,8 +39,8 @@
                         <ul>
                             <table border="0">
                                 <tr>
-                                    <td width="194" bgcolor="#99CCFF">项目名称</td>
-                                    <td width="123" bgcolor="#99CCFF">项目类别</td>
+                                    <td width="194"><span class="STYLE1">项目名称</span></td>
+                                    <td width="123"><span class="STYLE1">项目类别</span></td>
                                     <td width="122"></td>
                                 </tr>
                                 <s:iterator value="projects">

@@ -2,7 +2,7 @@
 <%@ taglib prefix="s" uri="/struts-tags"%>
 <s:include value="/jsp/header.jsp"></s:include>
 <SCRIPT type=text/javascript>
-	document.getElementById('mz-n1').className = 'n1';
+	document.getElementById('mz-n3').className = 'n3';
 	//-->
 </SCRIPT>
 
@@ -12,7 +12,7 @@
         <DIV class=menuLab>
             <DIV class=leftmenu>
                 <UL>
-                    <LI id=Labone ><A href="#" target=_self><SPAN>论文管理</SPAN></A></LI>
+                    <LI id=Labone ><A href="<s:url action="paper" namespace="/research"/>" target=_self><SPAN>论文管理</SPAN></A></LI>
                     <LI id=MzLm_AboutMZ><A href="#" target=_self><SPAN>成果管理</SPAN></A></LI>
                     <LI id=MzLm_AboutMZ><A href="#" target=_self><SPAN>知识产权管理</SPAN></A></LI>
                     <LI id=MzLm_AboutMZ><A href="#" target=_self><SPAN>学术活动管理</SPAN></A></LI>

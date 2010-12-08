@@ -12,7 +12,7 @@ public class Paper implements java.io.Serializable {
 	private BigDecimal paperId;
 	private String paperName;
 	private BigDecimal projectId;
-	private BigDecimal paperAuthor;
+	private String paperAuthor;
 	private BigDecimal paperAttribute;
 	private String note;
 
@@ -20,7 +20,7 @@ public class Paper implements java.io.Serializable {
 	}
 
 	public Paper(BigDecimal paperId, String paperName,
-			BigDecimal projectId, BigDecimal paperAuthor) {
+			BigDecimal projectId, String paperAuthor) {
 		this.paperId = paperId;
 		this.paperName = paperName;
 		this.projectId = projectId;
@@ -28,7 +28,7 @@ public class Paper implements java.io.Serializable {
 	}
 
 	public Paper(BigDecimal paperId, String paperName,
-			BigDecimal projectId, BigDecimal paperAuthor,
+			BigDecimal projectId, String paperAuthor,
 			BigDecimal paperAttribute, String note) {
 		this.paperId = paperId;
 		this.paperName = paperName;
@@ -62,11 +62,11 @@ public class Paper implements java.io.Serializable {
 		this.projectId = projectId;
 	}
 
-	public BigDecimal getPaperAuthor() {
+	public String getPaperAuthor() {
 		return this.paperAuthor;
 	}
 
-	public void setPaperAuthor(BigDecimal paperAuthor) {
+	public void setPaperAuthor(String paperAuthor) {
 		this.paperAuthor = paperAuthor;
 	}
 

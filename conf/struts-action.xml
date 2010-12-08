@@ -112,8 +112,40 @@
     </package>
     
     <package name="research" namespace="/research" extends="rpm-default">
+    	<action name="index" class="researchAction" method="index">
+    		<result>/jsp/research/research.jsp</result>
+    	</action>
     
-    
+    	<action name="paper" class="paperAction" method="index">
+    		<result>/jsp/research/research_paper.jsp</result>
+    	</action>
+	
+		<action name="add_paper" class="paperAction" method="addPaper">
+			<result name="success" type="redirectAction">
+				<param name="actionName">paper</param>
+				<param name="namespace">/research</param>
+			</result>
+			<result name="input">/jsp/research/research_paper.jsp</result>
+		</action>
+		
+		<action name="detail_paper" class="paperAction" method="detail">
+			<result>/jsp/research/research_paper_detail.jsp</result>	
+		</action>
+		
+		<action name="modify_paper" class="paperAction" method="modify">
+			<result type="redirectAction">
+				<param name="actionName">detail_paper</param>
+				<param name="namespace">/research</param>
+				<param name="id">${id}</param>				
+			</result>
+			<result name="input">/jsp/research/research_paper_edit.jsp</result>
+		</action>
+		<action name="delete_paper" class="paperAction" method="delete">
+    		<result type="redirectAction">
+    			<param name="actionName">paper</param>
+    			<param name="namespace">/research</param>
+    		</result>
+    	</action>
     </package>
     
 	<package name="system" namespace="/system" extends="rpm-default">
