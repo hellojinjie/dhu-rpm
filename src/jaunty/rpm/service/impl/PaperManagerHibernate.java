@@ -1,5 +1,6 @@
 package jaunty.rpm.service.impl;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import org.springframework.transaction.annotation.Transactional;
@@ -21,6 +22,21 @@ public class PaperManagerHibernate implements PaperManager {
 	@Override
 	public List<Paper> getAll() {
 		return this.paperDao.getAll();
+	}
+
+	@Override
+	public Paper getById(BigDecimal id) {
+		return this.paperDao.getById(id);
+	}
+
+	@Override
+	public void delete(Paper paper) {
+		this.paperDao.delete(paper);
+	}
+	
+	@Override
+	public void modify(Paper paper) {
+		this.paperDao.modify(paper);
 	}
 
 	public PaperDao getPaperDao() {

@@ -6,7 +6,7 @@
 <struts>
 
     <package name="login" namespace="/login" extends="rpm-default">
-
+ 
 		<default-action-ref name="index"></default-action-ref>
 
         <action name="index" class="loginAction">
@@ -131,6 +131,10 @@
 		
 		<action name="detail_paper" class="paperAction" method="detail">
 			<result>/jsp/research/research_paper_detail.jsp</result>	
+		</action>
+		
+		<action name="edit_paper" class="paperAction" method="edit">
+			<result>/jsp/research/research_paper_edit.jsp</result>
 		</action>
 		
 		<action name="modify_paper" class="paperAction" method="modify">

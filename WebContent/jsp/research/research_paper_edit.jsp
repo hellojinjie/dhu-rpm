@@ -34,24 +34,21 @@
                         论文管理调整： <br />
                         <hr />
                         <s:fielderror />
-                        <s:form action="v_modify" namespace="/project" theme="simple">
+                        <s:form action="modify_paper" namespace="/research" theme="simple">
                              <s:hidden name="id"></s:hidden>
                             <table>
                                 <tr>
                                     <td> 论文名称：
-                                        <s:textfield name="projectName" lable="项目名称" />
+                                        <s:textfield name="paperName" lable="项目名称" />
                                     </td>
                                     <td> 作者：
-                                        <s:textfield name="fundOrigin" />
+                                        <s:textfield name="paperAuthor" />
                                     </td>
                                 </tr>
                                 <tr>
-                                     <td> 所属项目：
-                                        <s:select name="projectClass" headerKey="-1" headerValue="选择类别" 
-									list="#{'个人论文':'个人论文', '部门论文':'部门论文', '科研处论文':'科研处论文}" required="true"/>
-                                    </td>
-                                    <td> 论文类别：
-                                        <s:textfield name="contractFund" />
+                                     <td> 论文类别：
+                                        <s:select name="paperAttribute" headerKey="-1" headerValue="选择类别" 
+									list="#{'1':'个人论文', '2':'部门论文', '3':'科研处论文'}" required="true"/>
                                     </td>
                                 </tr>
                                 <tr>
@@ -60,7 +57,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td><s:submit value="增加" />
+                                    <td><s:submit value="修改" />
                                     </td>
                                 </tr>
                             </table>

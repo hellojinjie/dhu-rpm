@@ -4,6 +4,7 @@ import jaunty.rpm.bean.Paper;
 import jaunty.rpm.service.PaperManager;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.commons.logging.Log;
@@ -18,7 +19,7 @@ public class ResearchPaperManagement extends ActionSupport {
 
 	private PaperManager paperManager;
 	
-	List<Paper> papers;
+	private List<Paper> papers;
 	
 	private BigDecimal id;
 	private String paperName;
@@ -32,6 +33,9 @@ public class ResearchPaperManagement extends ActionSupport {
 	}
 	
 	public String detail() {
+		Paper paper = paperManager.getById(id);
+		papers = new ArrayList<Paper>();
+		papers.add(paper);
 		
 		return SUCCESS;
 	}
@@ -49,13 +53,31 @@ public class ResearchPaperManagement extends ActionSupport {
 		return SUCCESS;
 	}
 	
+	public String edit() {
+		Paper paper = this.paperManager.getById(id);
+		
+		this.paperAttribute = paper.getPaperAttribute();
+		this.note = paper.getNote();
+		this.paperAuthor = paper.getPaperAuthor();
+		this.paperName = paper.getPaperName();
+		
+		return SUCCESS;
+	}
+	
 	public String modify() {
+		Paper paper = paperManager.getById(id);
+		paper.setPaperName(paperName);
+		paper.setPaperAttribute(paperAttribute);
+		paper.setPaperAuthor(paperAuthor);
+		paper.setNote(note);
+		
+		paperManager.modify(paper);
 		
 		return SUCCESS;
 	}
 	
 	public String delete() {
-		
+		this.paperManager.delete(this.paperManager.getById(id));
 		return SUCCESS;
 	}
 

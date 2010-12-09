@@ -51,7 +51,7 @@
                                         <td><s:property value="paperName"/></td>
                                         <td><s:property value="paperAuthor"/></td>
                                         <td><s:property value="paperAttribute"/></td>
-                                        <td><a href="">详细信息</a></td>
+                                        <td><a href="<s:url action="detail_paper" namespace="/research"><s:param name="id" value="%{paperId}" /></s:url>">详细信息</a></td>
                                     </tr>
                                 </s:iterator>
                             </table>
