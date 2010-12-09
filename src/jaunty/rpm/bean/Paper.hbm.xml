@@ -6,7 +6,9 @@
     <class name="jaunty.rpm.bean.Paper" table="PAPER_MANAGE" schema="RPM">
         <id name="paperId" type="big_decimal">
             <column name="PAPER_ID" precision="22" scale="0" />
-            <generator class="assigned" />
+            <generator class="sequence">
+            	 <param name="sequence">SEQ_PAPER_ID</param>
+            </generator>
         </id>
         <property name="paperName" type="string">
             <column name="PAPER_NAME" length="128" not-null="true" />

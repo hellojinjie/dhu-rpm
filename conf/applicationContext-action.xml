@@ -27,11 +27,11 @@
 		<property name="projectMemberManager" ref="projectMemberManager"></property>
 	</bean>
 	
-	<bean id="researchAction" class="jaunty.rpm.action.research.ResearchManagement">
+	<bean id="researchAction" class="jaunty.rpm.action.research.ResearchManagement" scope="prototype">
 	</bean>
 	
-	<bean id="paperAction" class="jaunty.rpm.action.research.ResearchPaperManagement">
-		
+	<bean id="paperAction" class="jaunty.rpm.action.research.ResearchPaperManagement" scope="prototype">
+		<property name="paperManager" ref="paperManager"></property>
 	</bean>
 	
 </beans>

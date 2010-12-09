@@ -18,7 +18,7 @@
         <DIV class=menuLab>
             <DIV class=leftmenu>
                 <UL>
-                    <LI id=Labone class=selected><A href="#" target=_self><SPAN>论文管理</SPAN></A></LI>
+                    <LI id=Labone class=selected><A href="<s:url action="paper" namespace="/research"/>" target=_self><SPAN>论文管理</SPAN></A></LI>
                     <LI id=MzLm_AboutMZ><A href="#" target=_self><SPAN>成果管理</SPAN></A></LI>
                     <LI id=MzLm_AboutMZ><A href="#" target=_self><SPAN>知识产权管理</SPAN></A></LI>
                     <LI id=MzLm_AboutMZ><A href="#" target=_self><SPAN>学术活动管理</SPAN></A></LI>
@@ -43,16 +43,14 @@
                                 <tr>
                                     <td width="194"><span class="STYLE1">论文名称</span></td>
                                     <td width="123"><span class="STYLE1">作者</span></td>
-                                    <td width="123"><span class="STYLE1">所属项目</span></td>
                                     <td width="123"><span class="STYLE1">论文类别</span></td>
                                     <td width="122"></td>
                                 </tr>
-                                <s:iterator value="projects">
+                                <s:iterator value="papers">
                                     <tr>
-                                        <td><s:property value=""/></td>
-                                        <td><s:property value=""/></td>
-                                        <td><s:property value=""/></td>
-                                        <td><s:property value=""/></td>
+                                        <td><s:property value="paperName"/></td>
+                                        <td><s:property value="paperAuthor"/></td>
+                                        <td><s:property value="paperAttribute"/></td>
                                         <td><a href="">详细信息</a></td>
                                     </tr>
                                 </s:iterator>
@@ -61,7 +59,7 @@
                         <hr />
                         论文新增：<br/>
                         <s:fielderror />
-                        <s:form action="addPaper" namespace="/research" theme="simple">
+                        <s:form action="add_paper" namespace="/research" theme="simple">
                             <table>
                                 <tr>
                                     <td> 论文名称：

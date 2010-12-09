@@ -13,7 +13,9 @@
 	<bean id="dateFormat" class="java.text.SimpleDateFormat">
 		<constructor-arg><value>yyyy-MM-dd HH:mm:ss</value></constructor-arg>
 	</bean>
-
+	
+	<!-- sevices bean -->
+	
 	<bean id="userManager" class="jaunty.rpm.service.impl.UserManagerHibernate">
 		<property name="userDao" ref="userDao"></property>
 	</bean>
@@ -24,7 +26,9 @@
 	<bean id="projectMemberManager" class="jaunty.rpm.service.impl.ProjectMemberManagerHibernate">
 		<property name="projectMemberDao" ref="projectMemberDao"></property>
 	</bean>
-	
+	<bean id="paperManager" class="jaunty.rpm.service.impl.PaperManagerHibernate">
+		<property name="paperDao" ref="paperDao"></property>
+	</bean>
 	
 	<!-- data access object -->
 
@@ -36,6 +40,9 @@
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
 	<bean id="projectMemberDao" class="jaunty.rpm.dao.ProjectMemberDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="paperDao" class="jaunty.rpm.dao.PaperDao">
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
 </beans>

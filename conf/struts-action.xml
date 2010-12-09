@@ -118,6 +118,7 @@
     
     	<action name="paper" class="paperAction" method="index">
     		<result>/jsp/research/research_paper.jsp</result>
+			<result name="input">/jsp/research/research_paper.jsp</result>
     	</action>
 	
 		<action name="add_paper" class="paperAction" method="addPaper">
