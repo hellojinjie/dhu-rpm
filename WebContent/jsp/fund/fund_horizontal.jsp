@@ -2,7 +2,7 @@
 <%@ taglib prefix="s" uri="/struts-tags"%>
 <s:include value="/jsp/header.jsp"></s:include>
 <SCRIPT type=text/javascript>
-	document.getElementById('mz-n3').className = 'n3';
+	document.getElementById('mz-n2').className = 'n2';
 	//-->
 </SCRIPT>
 <style type="text/css">
@@ -11,17 +11,15 @@
 -->
 </style>
 
-
 <DIV class=pageadv><IMG border=0 src="<s:url value="/images/library.png" />" ></DIV>
 <DIV class=main>
     <DIV class=left>
         <DIV class=menuLab>
             <DIV class=leftmenu>
                 <UL>
-                    <LI id=Labone class=selected><A href="<s:url action="paper" namespace="/research"/>" target=_self><SPAN>论文管理</SPAN></A></LI>
-                    <LI id=MzLm_AboutMZ><A href="#" target=_self><SPAN>成果管理</SPAN></A></LI>
-                    <LI id=MzLm_AboutMZ><A href="#" target=_self><SPAN>知识产权管理</SPAN></A></LI>
-                    <LI id=MzLm_AboutMZ><A href="#" target=_self><SPAN>学术活动管理</SPAN></A></LI>
+                    <LI id=Labone class="selected"><A href="<s:url action="horizontal" namespace="/fund"/>" target=_self><SPAN>横向经费卡</SPAN></A></LI>
+                    <LI id=MzLm_AboutMZ><A href="#" target=_self><SPAN>纵向经费卡</SPAN></A></LI>
+                    
                 </UL>
             </DIV>
         </DIV>
@@ -29,49 +27,49 @@
     <DIV class=right>
         <DIV class=pagebody>
             <DIV class=pagefirst></DIV>
-            <SPAN class="icontitle iconnews">学术论文</SPAN>
+            <SPAN class="icontitle iconnews">横向经费卡信息</SPAN>
             <DIV class=clear></DIV>
             <!--内容开始-->
             <DIV class=NewsList>
-                <!--新闻列表开始-->
-                    <UL class=stories featured>
+
+     <UL class=stories featured>
                         <!-- 这里放内容 -->
-                        论文列表： <br/>
+                        经费卡列表： <br/>
                         <ul>
                             <table border="0">
                                 <tr>
-                                    <td width="194"><span class="STYLE1">论文名称</span></td>
-                                    <td width="123"><span class="STYLE1">作者</span></td>
-                                    <td width="123"><span class="STYLE1">论文类别</span></td>
-                                    <td width="122"></td>
+                                    <td width="194"><span class="STYLE1">经费卡编号</span></td>
+                                    <td width="123"><span class="STYLE1">所属项目编号</span></td>
+                                    <td width="123"><span class="STYLE1">转入金额</span></td>
+                                    <td width="122">详细信息</td>
                                 </tr>
-                                <s:iterator value="papers">
+                                <s:iterator value="cards">
                                     <tr>
-                                        <td><s:property value="paperName"/></td>
-                                        <td><s:property value="paperAuthor"/></td>
-                                        <td><s:property value="paperAttribute"/></td>
-                                        <td><a href="<s:url action="detail_paper" namespace="/research"><s:param name="id" value="%{paperId}" /></s:url>">详细信息</a></td>
+                                        <td><s:property value="cardId"/></td>
+                                        <td><s:property value="projectId"/></td>
+                                        <td><s:property value="inclusionFund"/></td>
+                                        <td><a href="<s:url action="h_detail" namespace="/fund"><s:param name="id" value="%{cardId}" /></s:url>">详细信息</a></td>
                                     </tr>
                                 </s:iterator>
                             </table>
                         </ul>
                         <hr />
-                        论文新增：<br/>
+                        增加经费卡：<br/>
                         <s:fielderror />
-                        <s:form action="add_paper" namespace="/research" theme="simple">
+                        <s:form action="h_add" namespace="/fund" theme="simple">
                             <table>
                                 <tr>
-                                    <td> 论文名称：
-                                        <s:textfield name="paperName" lable="项目名称" />
+                                    <td> 所属项目编号：
+                                        <s:textfield name="projectId" lable="项目名称" />
                                     </td>
-                                    <td> 作者：
-                                        <s:textfield name="paperAuthor" />
+                                    <td> 转入金额：
+                                        <s:textfield name="inclusionFund" />
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td> 论文类别：
-                                        <s:select name="paperAttribute" headerKey="-1" headerValue="选择类别" 
-									list="#{'1':'个人论文', '2':'部门论文', '3':'科研处论文'}" required="true"/>
+                                    <td> 经费卡属性：
+                                        <s:select name="cardAttribute" headerKey="-1" headerValue="选择类别" 
+                                    list="#{'1':'横向经费卡', '2':'纵向经费卡'}" required="true"/>
                                     </td>
                                   
                                 </tr>
@@ -88,6 +86,7 @@
                             </table>
                         </s:form>
                     </UL>
+            
             </DIV>
             <DIV class=pageend></DIV>
         </DIV>

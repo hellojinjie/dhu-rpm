@@ -6,7 +6,9 @@
     <class name="jaunty.rpm.bean.TotalCard" table="TOTAL_CARD_MANAGE" schema="RPM">
         <id name="cardId" type="big_decimal">
             <column name="CARD_ID" precision="22" scale="0" />
-            <generator class="assigned" />
+            <generator class="sequence">
+            	 <param name="sequence">SEQ_TOTAL_CARD_ID</param>
+            </generator>
         </id>
         <property name="projectId" type="big_decimal">
             <column name="PROJECT_ID" precision="22" scale="0" not-null="true" />

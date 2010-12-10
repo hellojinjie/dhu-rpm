@@ -29,7 +29,9 @@
 	<bean id="paperManager" class="jaunty.rpm.service.impl.PaperManagerHibernate">
 		<property name="paperDao" ref="paperDao"></property>
 	</bean>
-	
+	<bean id="fundManager" class="jaunty.rpm.service.impl.FundManagerHibernate">
+		<property name="fundDao" ref="fundDao"></property>
+	</bean>
 	<!-- data access object -->
 
 	<bean id="userDao" class="jaunty.rpm.dao.UserDao">
@@ -43,6 +45,9 @@
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
 	<bean id="paperDao" class="jaunty.rpm.dao.PaperDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="fundDao" class="jaunty.rpm.dao.FundDao">
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
 </beans>

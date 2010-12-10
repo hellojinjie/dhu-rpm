@@ -32,7 +32,6 @@
             <!--内容开始-->
             <DIV class=NewsList>
                 <!--新闻列表开始-->
-                <DIV class=picnews>
                     <UL class=stories featured>
                         <!-- 这里放内容 -->
                         项目列表： <br />
@@ -97,8 +96,6 @@
                     <UL class=stories featured>
                         <!-- put things here -->
                     </UL>
-                </DIV>
-            
             </DIV>
             <DIV class=pageend></DIV>
         </DIV>

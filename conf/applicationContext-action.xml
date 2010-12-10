@@ -34,4 +34,9 @@
 		<property name="paperManager" ref="paperManager"></property>
 	</bean>
 	
+	<bean id="fundAction" class="jaunty.rpm.action.fund.FundAction" scope="prototype"></bean>
+	 
+	<bean id="fundHorizontalAction" class="jaunty.rpm.action.fund.HorizontalAction" scope="prototype">
+		<property name="fundManager" ref="fundManager"></property>
+	</bean>
 </beans>

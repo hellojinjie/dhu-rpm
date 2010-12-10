@@ -26,7 +26,7 @@
 <div id="logo"><a href="<s:url action="index" namespace="/" />"><img src="<s:url value="/images/logo.png" />" border="0" /></a></div>
 <ul id="nav">
     <li id="mz-n1"><a href="<s:url action="index" namespace="/project" />" class="top_link"><span>项目管理</span></a></li>
-    <li id="mz-n2"><a href="<s:url action="index" namespace="/project" />" class="top_link"><span>经费管理</span></a></li>
+    <li id="mz-n2"><a href="<s:url action="index" namespace="/fund" />" class="top_link"><span>经费管理</span></a></li>
     <li id="mz-n3"><a href="<s:url action="index" namespace="/research" />" class="top_link"><span>学术管理</span></a></li>
     <li id="mz-n4"><a href="#" class="top_link"><span>科研处管理</span></a></li>
     <li id="mz-n5"><a href="#" class="top_link"><span>系统管理</span></a></li>
