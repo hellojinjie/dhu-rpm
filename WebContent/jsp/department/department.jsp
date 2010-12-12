@@ -2,7 +2,7 @@
 <%@ taglib prefix="s" uri="/struts-tags"%>
 <s:include value="/jsp/header.jsp"></s:include>
 <SCRIPT type=text/javascript>
-	document.getElementById('mz-n2').className = 'n2';
+	document.getElementById('mz-n4').className = 'n4';
 	//-->
 </SCRIPT>
 

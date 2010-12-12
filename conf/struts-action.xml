@@ -102,45 +102,14 @@
     </package>
     
     <package name="department" namespace="/department" extends="rpm-default">
-    	<action name="index" class="fundAction" method="index">
-    		<result>/jsp/fund/fund.jsp</result>
+    	<action name="index" class="departmentAction" method="index">
+    		<result>/jsp/department/department.jsp</result>
     	</action>
     
-    	<action name="horizontal" class="fundHorizontalAction" method="index">
-    		<result>/jsp/fund/fund_horizontal.jsp</result>
+    	<action name="statistic" class="statisticAction" method="index">
+    		<result>/jsp/department/statistic.jsp</result>
     	</action>
 	
-		<action name="h_add" class="fundHorizontalAction" method="add">
-			<result name="success" type="redirectAction">
-				<param name="actionName">horizontal</param>
-				<param name="namespace">/fund</param>
-			</result>
-			<result name="input">/jsp/fund/fund_horizontal.jsp</result>
-		</action>
-		
-		<action name="h_detail" class="fundHorizontalAction" method="detail">
-			<result>/jsp/fund/fund_horizontal_detail.jsp</result>	
-		</action>
-		
-		<action name="h_edit" class="fundHorizontalAction" method="edit">
-			<result>/jsp/fund/fund_horizontal_edit.jsp</result>
-		</action>
-		
-		<action name="h_modify" class="fundHorizontalAction" method="modify">
-			<result type="redirectAction">
-				<param name="actionName">h_detail</param>
-				<param name="namespace">/fund</param>
-				<param name="id">${id}</param>				
-			</result>
-			<result name="input">/jsp/fund/fund_horizontal_edit.jsp</result>
-		</action>
-		<action name="h_delete" class="fundHorizontalAction" method="delete">
-    		<result type="redirectAction">
-    			<param name="actionName">horizontal</param>
-    			<param name="namespace">/fund</param>
-    		</result>
-    	</action>
-    
     </package>
     
     <package name="fund" namespace="/fund" extends="rpm-default">

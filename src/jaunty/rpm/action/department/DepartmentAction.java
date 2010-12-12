@@ -6,4 +6,7 @@ public class DepartmentAction extends ActionSupport {
 
 	private static final long serialVersionUID = 5704436268542481654L;
 
+	public String index() {
+		return SUCCESS;
+	}
 }

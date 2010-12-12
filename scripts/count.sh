@@ -1,0 +1,1 @@
+ find . -name *.java -or -name *.xml -or -name *.jsp | grep -v build | grep -v .setting | xargs cat | wc
