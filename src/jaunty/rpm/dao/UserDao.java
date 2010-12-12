@@ -2,6 +2,7 @@ package jaunty.rpm.dao;
 
 import jaunty.rpm.bean.User;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import org.apache.commons.logging.Log;
@@ -40,5 +41,18 @@ public class UserDao extends HibernateDaoSupport {
 			log.debug("could not find the specified user: " + name);
 			return null;
 		}
+	}
+	
+	public void register(User user) {
+		this.getHibernateTemplate().saveOrUpdate(user);
+	}
+	
+	public User getById(BigDecimal id) {
+		return this.getHibernateTemplate().load(User.class, id);
+	}
+	
+	@SuppressWarnings("unchecked")
+	public List<User> getAll() {
+		return this.getHibernateTemplate().find("from User order by userid");
 	}
 }

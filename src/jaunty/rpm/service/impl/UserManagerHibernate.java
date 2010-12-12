@@ -1,10 +1,13 @@
 package jaunty.rpm.service.impl;
 
-import org.springframework.transaction.annotation.Transactional;
-
 import jaunty.rpm.bean.User;
 import jaunty.rpm.dao.UserDao;
 import jaunty.rpm.service.UserManager;
+
+import java.math.BigDecimal;
+import java.util.List;
+
+import org.springframework.transaction.annotation.Transactional;
 
 @Transactional
 public class UserManagerHibernate implements UserManager {
@@ -33,9 +36,19 @@ public class UserManagerHibernate implements UserManager {
 
 	@Override
 	public void register(User user) {
-		
+		this.userDao.register(user);
 	}
 
+	@Override
+	public User getById(BigDecimal id) {
+		return this.userDao.getById(id);
+	}
+	
+	@Override
+	public List<User> getAll() {
+		return this.userDao.getAll();
+	}
+	
 	public void setUserDao(UserDao userDao) {
 		this.userDao = userDao;
 	}

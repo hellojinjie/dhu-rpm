@@ -6,7 +6,9 @@
     <class name="jaunty.rpm.bean.User" table="USER_MANAGE" schema="RPM">
         <id name="userid" type="big_decimal">
             <column name="USERID" precision="22" scale="0" />
-            <generator class="assigned" />
+            <generator class="sequence">
+            	 <param name="sequence">SEQ_user_ID</param>
+            </generator>
         </id>
         <property name="password" type="string">
             <column name="PASSWORD" length="128" not-null="true" />
@@ -15,13 +17,13 @@
             <column name="USER_NAME" length="128" not-null="true" />
         </property>
         <property name="departmentId" type="big_decimal">
-            <column name="DEPARTMENT_ID" precision="22" scale="0" not-null="true" />
+            <column name="DEPARTMENT_ID" precision="22" scale="0" />
         </property>
-        <property name="permission" type="big_decimal">
-            <column name="PERMISSION" precision="22" scale="0" not-null="true" />
+        <property name="permission" type="string">
+            <column name="PERMISSION" length="128" not-null="true" />
         </property>
         <property name="projectId" type="big_decimal">
-            <column name="PROJECT_ID" precision="22" scale="0" not-null="true" />
+            <column name="PROJECT_ID" precision="22" scale="0" />
         </property>
         <property name="note" type="string">
             <column name="NOTE" length="256" />

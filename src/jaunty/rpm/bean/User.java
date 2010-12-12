@@ -9,11 +9,12 @@ import java.math.BigDecimal;
  */
 public class User implements java.io.Serializable {
 
+	private static final long serialVersionUID = -8957974553937369224L;
 	private BigDecimal userid;
 	private String password;
 	private String username;
 	private BigDecimal departmentId;
-	private BigDecimal permission;
+	private String permission;
 	private BigDecimal projectId;
 	private String note;
 
@@ -21,7 +22,7 @@ public class User implements java.io.Serializable {
 	}
 
 	public User(BigDecimal userid, String password, String username,
-			BigDecimal departmentId, BigDecimal permission, BigDecimal projectId) {
+			BigDecimal departmentId, String permission, BigDecimal projectId) {
 		this.userid = userid;
 		this.password = password;
 		this.username = username;
@@ -31,7 +32,7 @@ public class User implements java.io.Serializable {
 	}
 
 	public User(BigDecimal userid, String password, String username,
-			BigDecimal departmentId, BigDecimal permission,
+			BigDecimal departmentId, String permission,
 			BigDecimal projectId, String note) {
 		this.userid = userid;
 		this.password = password;
@@ -74,11 +75,11 @@ public class User implements java.io.Serializable {
 		this.departmentId = departmentId;
 	}
 
-	public BigDecimal getPermission() {
+	public String getPermission() {
 		return this.permission;
 	}
 
-	public void setPermission(BigDecimal permission) {
+	public void setPermission(String permission) {
 		this.permission = permission;
 	}
 

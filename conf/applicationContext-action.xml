@@ -39,4 +39,10 @@
 	<bean id="fundHorizontalAction" class="jaunty.rpm.action.fund.HorizontalAction" scope="prototype">
 		<property name="fundManager" ref="fundManager"></property>
 	</bean>
+	
+	<bean id="systemAction" class="jaunty.rpm.action.system.SystemAction" scope="prototype"></bean>
+	
+	<bean id="userManagementAction" class="jaunty.rpm.action.system.UserManagementAction" scope="prototype">
+		<property name="userManager" ref="userManager"></property>
+	</bean>
 </beans>

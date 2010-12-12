@@ -16,7 +16,7 @@
 
         <action name="login" class="loginAction" method="login">
             <interceptor-ref name="defaultStack"></interceptor-ref>
-	        <result type="redirect" >/</result>
+	        <result type="redirect">/</result>
             <result name="input">/jsp/login/login.jsp</result>
         </action>
         
@@ -102,7 +102,44 @@
     </package>
     
     <package name="department" namespace="/department" extends="rpm-default">
+    	<action name="index" class="fundAction" method="index">
+    		<result>/jsp/fund/fund.jsp</result>
+    	</action>
     
+    	<action name="horizontal" class="fundHorizontalAction" method="index">
+    		<result>/jsp/fund/fund_horizontal.jsp</result>
+    	</action>
+	
+		<action name="h_add" class="fundHorizontalAction" method="add">
+			<result name="success" type="redirectAction">
+				<param name="actionName">horizontal</param>
+				<param name="namespace">/fund</param>
+			</result>
+			<result name="input">/jsp/fund/fund_horizontal.jsp</result>
+		</action>
+		
+		<action name="h_detail" class="fundHorizontalAction" method="detail">
+			<result>/jsp/fund/fund_horizontal_detail.jsp</result>	
+		</action>
+		
+		<action name="h_edit" class="fundHorizontalAction" method="edit">
+			<result>/jsp/fund/fund_horizontal_edit.jsp</result>
+		</action>
+		
+		<action name="h_modify" class="fundHorizontalAction" method="modify">
+			<result type="redirectAction">
+				<param name="actionName">h_detail</param>
+				<param name="namespace">/fund</param>
+				<param name="id">${id}</param>				
+			</result>
+			<result name="input">/jsp/fund/fund_horizontal_edit.jsp</result>
+		</action>
+		<action name="h_delete" class="fundHorizontalAction" method="delete">
+    		<result type="redirectAction">
+    			<param name="actionName">horizontal</param>
+    			<param name="namespace">/fund</param>
+    		</result>
+    	</action>
     
     </package>
     
@@ -191,7 +228,44 @@
     </package>
     
 	<package name="system" namespace="/system" extends="rpm-default">
+   		<action name="index" class="systemAction" method="index">
+    		<result>/jsp/system/system.jsp</result>
+    	</action>
     
+    	<action name="user" class="userManagementAction" method="index">
+    		<result>/jsp/system/user.jsp</result>
+    	</action>
+	
+		<action name="u_add" class="userManagementAction" method="add">
+			<result name="success" type="redirectAction">
+				<param name="actionName">user</param>
+				<param name="namespace">/system</param>
+			</result>
+			<result name="input">/jsp/system/user.jsp</result>
+		</action>
+		
+		<action name="u_detail" class="userManagementAction" method="detail">
+			<result>/jsp/system/user_detail.jsp</result>	
+		</action>
+		
+		<action name="u_edit" class="userManagementAction" method="edit">
+			<result>/jsp/system/user_edit.jsp</result>
+		</action>
+		
+		<action name="u_modify" class="userManagementAction" method="modify">
+			<result type="redirectAction">
+				<param name="actionName">u_detail</param>
+				<param name="namespace">/system</param>
+				<param name="id">${id}</param>				
+			</result>
+			<result name="input">/jsp/system/user_edit.jsp</result>
+		</action>
+		<action name="u_delete" class="userManagementAction" method="delete">
+    		<result type="redirectAction">
+    			<param name="actionName">user</param>
+    			<param name="namespace">/system</param>
+    		</result>
+    	</action>
     
     </package>
    
